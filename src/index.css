@@ -1,0 +1,7 @@
+/*
+typically in reacl it applies to global styles (things that apply everywhere, e.g. body, html, fonts, resets)
+*/
+
+html, body {
+    margin: 0;
+}
