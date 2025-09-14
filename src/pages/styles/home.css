@@ -44,3 +44,26 @@ projects__display--box is parent the outer box*/
   color: #333;
 }
 
+.ipad-slider {
+  width: 70%;
+  height: 5.5%;
+  background-color: rgb(143, 120, 120);
+  border-radius: 20px;
+  position: relative;
+}
+
+.inside__slider-circle{
+  width: 25px;
+  height: 25px;
+  background-color: #333;
+  border-radius: 50%;
+  top: 25%;
+  left: 4%;
+  transform: translateX(0px); /* Start at 0, not 100px */
+  transition: transform 0.3s ease; /* Add smooth movement */
+}
+
+/* When clicked, move the circle */
+.inside__slider-circle.moved {
+  transform: translateX(100px);
+}
