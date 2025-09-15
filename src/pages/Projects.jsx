@@ -1,3 +1,4 @@
+// NOT IN USE MAYBE ALTER
 import './styles/project.css';
 import { projects } from '../data/projectsInfo';
 import ProjectCard from '../components/ProjectCard';

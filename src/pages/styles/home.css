@@ -45,25 +45,55 @@ projects__display--box is parent the outer box*/
 }
 
 .ipad-slider {
-  width: 70%;
-  height: 5.5%;
-  background-color: rgb(143, 120, 120);
-  border-radius: 20px;
+  width: 300px;         
+  height: 80px;             
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 40px;       /* More rounded */
   position: relative;
+  margin: 2rem auto;         /* for centering it */
+  border: 2px solid rgba(255, 255, 255, 0.2); 
 }
 
+.ipad-slider p{
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 .inside__slider-circle{
-  width: 25px;
-  height: 25px;
-  background-color: #333;
+  width: 70px;               /* Bigger circle */
+  height: 70px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%); /* Orange gradient */
   border-radius: 50%;
-  top: 25%;
-  left: 4%;
-  transform: translateX(0px); /* Start at 0, not 100px */
-  transition: transform 0.3s ease; /* Add smooth movement */
+  top: 5px;                  /* Center vertically */
+  left: 10px;
+  position: absolute;
+  transform: translateX(0px);
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Nice shadow */
 }
 
 /* When clicked, move the circle */
 .inside__slider-circle.moved {
-  transform: translateX(100px);
+  transform: translateX(200px);
+}
+
+.project-detail--out {
+  position: fixed;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  background-color: white;
+  top: 8%;
+  padding: 2rem;
+  box-shadow: -5px 0 15px rgba(180, 0, 0, 0.3);
+}
+
+.close-project-detail {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
 }

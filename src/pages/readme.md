@@ -16,3 +16,7 @@ about home cause i sitll find the ! to be confusing:
 7. ANIMATION: showWork ? 'moved' : '' → true ? 'moved' : '' → 'moved' class added
    ↓
 8. VISUAL: Button slides, projects appear, hero disappears
+
+*********************************
+ISSUES:
+if i click on one project and the i want to go back to seing all projects i get redirected ot home page instead of project list
