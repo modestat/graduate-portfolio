@@ -5,13 +5,27 @@ import {useState} from 'react';
 /**
  * 
  * TODO: this slider is just a click but i need for it to slide (with mouse in dektop) and touch for mobile devices
+ * For Desktop (Mouse):
+
+onMouseDown - User presses mouse button on slider
+onMouseMove - User drags while holding button
+onMouseUp - User releases mouse button
+
+For Mobile (Touch):
+
+onTouchStart - User touches slider
+onTouchMove - User drags finger
+onTouchEnd - User lifts finger
  */
 const HomePage = () => {
-
   // If showWork is false: show landing with slider
   // If showWork is true: show projects
   const [showWork, setShowWork] = useState(false); //initial state: work is not being shown yet because logic is false
   const [selectedProject, setSelectedProject] = useState(null); //initial state: no project is selected
+
+  const [isDragging, setIsDragging] = useState(false); // tracks if draaging is happening
+  const [startX, setStartX] = useState(0);            // stores where user started 
+  const [currentX, setCurrentX] = useState(0);
 
   const toggleSlider = () => {
     setShowWork(!showWork); //basically the the onclick event is triggered it calles the toggelSLider funciton and since the initialze value of the showing part is false it shows the hero seciton, but since inside the funciton we have spezidied that it need to not be false aka true when the funciton is triggered it shows the content of the projects
@@ -20,6 +34,36 @@ const HomePage = () => {
  // this funciton saves which project was saved
   const openProjectDetail = (project) => { // arrow funciton that takes different projects as arguments and waits until user lcikcs on it, once clicked it will show the 2/3 view width informaiton about that specific project
     setSelectedProject(project);
+  }
+
+  //Remember that dragging has started
+ // Remember where they started (the X position)
+ // function when user starts dragging
+  const handleDragStart = (event) =>{ //event is putted as param, event tell you about the click
+    setIsDragging(true);
+     // For mouse: event.clientX
+  // For touch: event.touches[0].clientX
+  const x = event.touches ? event.touches[0].clientX : event.clientX;
+  setStartX(x); //clientX is the X position of the mouse when the event happened
+  }
+
+  const handleDragMove = (event) => { // function when user is dragging
+    if (!isDragging) return; // if not dragging do nothing
+    const x = event.touches ? event.touches[0].clientX : event.clientX;
+    setCurrentX(x); // update current X position
+  }
+
+  const handleDragEnd = () => { // function when user stops dragging
+    //1. calculate distance
+    //2. check if they drag more than 100px to the rights
+    //3. if yes, show work
+    //4. reset dragging state 
+    const distance = currentX - startX;
+    console.log("distance dragged:", distance);
+    if (distance > 50) { // changed distance from 100 to 50 becasue it was too much for mobile
+      setShowWork(true);
+    } 
+    setIsDragging(false); // nto putting this is else because it always need to stop dragging, no matter what
   }
   return (
     <div className="outer__parent--box">
@@ -31,8 +75,22 @@ const HomePage = () => {
         <p>Slide to the right to view my work or get to know me better through about page!</p>
       </section>
 
-       <div className='ipad-slider'>
-        <div className={`inside__slider-circle ${showWork ? 'moved' : ''}`} onClick={toggleSlider}></div>
+       <div className='ipad-slider'
+         onMouseDown={handleDragStart}
+         onMouseMove={handleDragMove}
+         onMouseUp={handleDragEnd}
+         onMouseLeave={handleDragEnd} // in case user drags the circle to the end of the slider and then leaves the slider area without releasing the mouse button, so that the work projects can be shown
+         onTouchStart={handleDragStart}
+         onTouchMove={handleDragMove}
+         onTouchEnd={handleDragEnd}
+         >
+        <div className={`inside__slider-circle ${showWork ? 'moved' : ''}`}
+               style={{ 
+                transform: isDragging 
+                  ? `translateX(${Math.min(Math.max(currentX - startX, 0), 200)}px)` 
+                  : undefined
+              }} >
+             </div>
           <p>Projects</p>
       </div>
       </>
