@@ -4,7 +4,7 @@ import { projects } from '../data/projectsInfo';
 import {useState} from 'react';
 /**
  * 
- * TODO: this slider is just a click but i need for it to slide (with mouse in dektop) and touch for mobile devices
+ * TODO: style better clean in code (maybe move the drag functions to a custom hook)
  * For Desktop (Mouse):
 
 onMouseDown - User presses mouse button on slider
@@ -59,7 +59,6 @@ const HomePage = () => {
     //3. if yes, show work
     //4. reset dragging state 
     const distance = currentX - startX;
-    console.log("distance dragged:", distance);
     if (distance > 50) { // changed distance from 100 to 50 becasue it was too much for mobile
       setShowWork(true);
     } 
