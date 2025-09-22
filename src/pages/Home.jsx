@@ -108,18 +108,25 @@ const HomePage = () => {
             description={project.description}
             date={project.date}
             buttonText={project.buttonText}
+            project={project} //passing the whole project object as a prop to the ProjectCard component so that when user clicks on it we have access to all the data of that specific project
             onProjectClick={openProjectDetail} //the prop "onPorjectClick" that comes from the child; You're giving each ProjectCard access to your openProjectDetail function by calling it onProjectClick
           />
         ))}
       </div>
       {/* Conditionally render the selected project details if a project is selected  -> to know which orojetc is selected the funciton called openPorjectDetail stores that information*/}
       {selectedProject && (
+        <>
+         {console.log("Full project data:", selectedProject)}
         <div className="project-detail--out">
           <h2>{selectedProject.title}</h2>
           <p>{selectedProject.description}</p>
           <p>Date: {selectedProject.date}</p>
+          <p>Technologies: {selectedProject.technologies}</p>
+          <p>Contributors: {selectedProject.contributors.join(', ')}</p>
+          <p>{selectedProject.longDescription}</p>
           <button className="close-project-detail" onClick={() => setSelectedProject(null)}>Close</button> 
         </div>
+        </>
       )}
       </>
      )}

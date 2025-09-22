@@ -20,3 +20,5 @@ about home cause i sitll find the ! to be confusing:
 *********************************
 ISSUES:
 if i click on one project and the i want to go back to seing all projects i get redirected ot home page instead of project list
+
+TODO: actually figure out how props are wokring and my compoennts because im getting lost!!!

@@ -4,9 +4,13 @@ export const projects = [
       id: 1, //definening the props here that are being displayed in the ProjectCard component
       slug: "studyplatform",
       title: "StudyPlatform",
-      description: "A platform for researchers to help create adn conduct studies",
+      description: "A platform for researchers to help create and conduct studies",
       date: "Spring 2025",
-      buttonText: "View demo"
+      buttonText: "Github Code",
+      technologies: "React, Node.js, MongoDB",  
+      github: "https://github.com/yourusername/studyplatform",  // ADD THIS
+      longDescription: "Full description of what you built and learned",  // ADD THIS
+      contributors: ["Emilie", "Marius", "Sabrina"] // ADD THIS
     },
     {
       id: 2,
