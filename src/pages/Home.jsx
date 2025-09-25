@@ -90,7 +90,7 @@ const HomePage = () => {
                   : undefined
               }} >
              </div>
-          <p>Projects</p>
+             <span className="slider-text right">Projects</span>
       </div>
       </>
      )}
@@ -122,7 +122,6 @@ const HomePage = () => {
           <p>{selectedProject.description}</p>
           <p>Date: {selectedProject.date}</p>
           <p>Technologies: {selectedProject.technologies}</p>
-          <p>Contributors: {selectedProject.contributors.join(', ')}</p>
           <p>{selectedProject.longDescription}</p>
           <button className="close-project-detail" onClick={() => setSelectedProject(null)}>Close</button> 
         </div>

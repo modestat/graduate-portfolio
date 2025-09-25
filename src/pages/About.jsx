@@ -1,4 +1,5 @@
-
+import profile from "../assets/profile.jpg";
+import './styles/AboutPage.css';
 
 const AboutPage = () => {
   return (
@@ -13,6 +14,7 @@ const AboutPage = () => {
         staying active at the gym, or experimenting with new recipes in the kitchen. I love staying connected with friends through social 
         events and always make time for self-care.
         </p>
+        <img className="profile-image" src={profile} alt="" />
     </div>
   )
 }
