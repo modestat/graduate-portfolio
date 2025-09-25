@@ -78,12 +78,14 @@ projects__display--box is parent the outer box*/
   position: fixed;
   right: 0;
   width: 60%;
-  height: 100vh;
+  height: 80vh;
   background-color: rgb(239, 219, 219);
   top: 8%;
   padding: 2rem;
   box-shadow: -5px 0 15px rgba(180, 0, 0, 0.3);
   z-index: 3;
+  overflow-y: auto; /* enable vertical scrolling since i have posoiton fixed*/
+  overflow-x: hidden; /*enable horizontal scrolling since i have posoiton fixed*/
 }
 
 .close-project-detail {
@@ -103,6 +105,43 @@ projects__display--box is parent the outer box*/
 
 .back-button:hover {
   background: #e0e0e0;
+}
+
+/*container for images*/
+.project-images-gallery {
+  margin: 20px 0;
+}
+
+.project-images-gallery h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* each image wrapper*/
+.project-image-item {
+  margin-bottom: 25px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-image-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* for text  */
+.project-image-item .caption {
+  padding: 15px;
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  background: white;
+  line-height: 1.4;
 }
 
 /*

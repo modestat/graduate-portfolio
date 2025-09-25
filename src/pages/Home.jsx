@@ -116,12 +116,25 @@ const HomePage = () => {
       {/* Conditionally render the selected project details if a project is selected  -> to know which orojetc is selected the funciton called openPorjectDetail stores that information*/}
       {selectedProject && (
         <>
-         {console.log("Full project data:", selectedProject)}
         <div className="project-detail--out">
           <h2>{selectedProject.title}</h2>
           <p>{selectedProject.description}</p>
           <p>Date: {selectedProject.date}</p>
           <p>Technologies: {selectedProject.technologies}</p>
+
+          {/*chck if data exist; data = selectedProject.images */}
+          {selectedProject.images && (
+            <div className="project-images--gallery">
+              {/*loop through the data; item = image(image object) */}
+              {selectedProject.images.map((image, index) => (
+                <div key={index} className="project-image-item">       {/*return html for each item; image.src, image.alt, image.caption */}
+                  <img src={image.src} alt={image.alt} />
+                  <p className="caption">{image.caption}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
           <p>{selectedProject.longDescription}</p>
           <button className="close-project-detail" onClick={() => setSelectedProject(null)}>Close</button> 
         </div>
