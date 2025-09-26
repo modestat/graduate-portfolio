@@ -2,8 +2,11 @@
 typically applies in react -> app wide layout rules (like grid, wrapper, background)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+
 html, body, #root{
     height:100%;
+    font-family: 'Crimson Text', serif;
 }
 
 #root {
@@ -15,3 +18,4 @@ html, body, #root{
     flex: 1;
     background-color: rgb(255, 255, 255);
 }
+

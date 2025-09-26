@@ -27,6 +27,8 @@ const HomePage = () => {
   const [startX, setStartX] = useState(0);            // stores where user started 
   const [currentX, setCurrentX] = useState(0);
 
+  const [imageNumber, setImageNumber] = useState(0); // state to track which image is being shown in the project detail view from array in the data.js
+
   const toggleSlider = () => {
     setShowWork(!showWork); //basically the the onclick event is triggered it calles the toggelSLider funciton and since the initialze value of the showing part is false it shows the hero seciton, but since inside the funciton we have spezidied that it need to not be false aka true when the funciton is triggered it shows the content of the projects
     //maybe redirect to the work page? 
@@ -63,6 +65,28 @@ const HomePage = () => {
       setShowWork(true);
     } 
     setIsDragging(false); // nto putting this is else because it always need to stop dragging, no matter what
+  }
+
+  // functions for caorusel to go back and forth between images
+  // need an funciton that takes event as param because i will be looking for click form client
+  // condiitons as length -1 for last index so user stops at last iamge
+  // and condition: index = 0 so perosn stays on first image if wanting to go back
+  // to detemrine how many images i have in my data.js i need .length property to determine that
+  const goToNextImage = (event) => {
+    if (imageNumber < selectedProject.images.length - 1) {
+      setImageNumber(imageNumber + 1); // if not at last image, then go forward"
+    }
+     // If AT last image, stay put (or loop to first)
+  }
+
+  const goToPrevious = (event) => {
+    // If NOT at first image, go to previous  
+    // index 0,1,2
+    // if (2 > 0) => go to prev
+    // if index 0 => 0 > 0 then stay since the condition becomes falsy
+    if (imageNumber > 0) {
+      setImageNumber(imageNumber - 1);
+    }
   }
   return (
     <div className="outer__parent--box">
@@ -125,13 +149,12 @@ const HomePage = () => {
           {/*chck if data exist; data = selectedProject.images */}
           {selectedProject.images && (
             <div className="project-images--gallery">
-              {/*loop through the data; item = image(image object) */}
-              {selectedProject.images.map((image, index) => (
-                <div key={index} className="project-image-item">       {/*return html for each item; image.src, image.alt, image.caption */}
-                  <img src={image.src} alt={image.alt} />
-                  <p className="caption">{image.caption}</p>
-                </div>
-              ))}
+               <button onClick={goToPrevious}>Previous</button>
+               <button onClick={goToNextImage}>next</button>
+              <div className="project-image-item">
+                  <img src={selectedProject.images[imageNumber].src} />
+                   <p className="caption">{selectedProject.images[imageNumber].caption}</p>
+              </div>
             </div>
           )}
 
@@ -148,3 +171,4 @@ const HomePage = () => {
         }
 
 export default HomePage
+

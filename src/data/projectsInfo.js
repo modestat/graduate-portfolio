@@ -2,6 +2,9 @@ import afterStudies from "../assets/projects/studyplatform/afterStudies.png";
 import emptyProject from '../assets/projects/studyplatform/emptyProject.png';
 import recruit from '../assets/projects/studyplatform/recruit.png';
 import studyplatform from "../assets/studyplatform.png";
+import placeholder from "../assets/projects/twitter/placeholder.png";
+import something from "../assets/projects/somehting/something.png";
+import upcoming from "../assets/projects/webtingenes/upcoming.png";
 
 
 export const projects = [
@@ -38,10 +41,62 @@ export const projects = [
   },
     {
       id: 2,
-      slug: "portfolio",
-      title: "Portfolio",
-      description: "A portfolio to showcase my projects and skills",
-      date: "Fall 2024",
-      buttonText: "View demo"
+      slug: "twitter clone",
+      title: "twitter clone",
+      description: "twitter clone",
+      date: "spring 2025",
+      buttonText: "View code",
+      mainImage: placeholder,
+    
+     images: [
+       {
+         src: emptyProject,
+         alt: "Empty project state",
+         caption: "Clean interface when starting a new project"
+       },
+     ],
+    technologies: "Python, React, FastAPI, PostgreSQL, Docker, Render",
+    github: "https://github.com/yourusername/studyplatform",
+    longDescription: "A web application for creating and managing"
+    },
+    {
+      id: 3,
+      slug: "somehting",
+      title: "somehting",
+      description: "twitter clone",
+      date: "spring 2025",
+      buttonText: "View code",
+      mainImage: something,
+    
+     images: [
+       {
+         src: emptyProject,
+         alt: "Empty project state",
+         caption: "Clean interface when starting a new project"
+       },
+     ],
+    technologies: "Python, React, FastAPI, PostgreSQL, Docker, Render",
+    github: "https://github.com/yourusername/studyplatform",
+    longDescription: "A web application for creating and managing"
+    },
+    {
+      id: 4,
+      slug: "upcoming",
+      title: "upcomming",
+      description: "twitter clone",
+      date: "fall 2025",
+      buttonText: "View code",
+      mainImage: upcoming,
+    
+     images: [
+       {
+         src: emptyProject,
+         alt: "Empty project state",
+         caption: "Clean interface when starting a new project"
+       },
+     ],
+    technologies: "",
+    github: "https://github.com/yourusername/studyplatform",
+    longDescription: "An upcoming project in course tingenes web"
     }
   ];
