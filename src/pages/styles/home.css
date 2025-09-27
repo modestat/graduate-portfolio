@@ -1,17 +1,20 @@
-/*
-projects__display--box is parent the outer box*/
-/*.projects__display--box {
-    background-color: #f9f9f9;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* creates 2 equal columns side by side
-    gap: 20px;
-}*/
+.projects__display--box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 160px);
+  gap: 15px;
+  max-width: 800px;
+  margin: 2rem auto;
+}
 
 /*the project__item is child the second div*/
 .outer__parent--box {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  /*
+  position: relative;
+  overflow: hidden;*/
 }
 
 .hero-section {
@@ -35,43 +38,6 @@ projects__display--box is parent the outer box*/
 
 .projects-section {
   padding: 4rem 0;
-}
-
-
-.ipad-slider {
-  width: 300px;         
-  height: 80px;             
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  border-radius: 40px;       /* More rounded */
-  position: relative;
-  margin: 2rem auto;         /* for centering it */
-  border: 2px solid rgba(255, 255, 255, 0.2); 
-}
-
-.ipad-slider p{
-  position: absolute;
-  top: 10%;
-  left: 70%;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-.inside__slider-circle{
-  width: 70px;               /* Bigger circle */
-  height: 70px;
-  background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%); /* Orange gradient */
-  border-radius: 50%;
-  top: 5px;                  /* Center vertically */
-  left: 10px;
-  position: absolute;
-  transform: translateX(0px);
-  transition: transform 0.4s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Nice shadow */
-}
-
-/* When clicked, move the circle */
-.inside__slider-circle.moved {
-  transform: translateX(200px);
 }
 
 .project-detail--out {
@@ -144,99 +110,21 @@ projects__display--box is parent the outer box*/
   line-height: 1.4;
 }
 
-/*
-/* Replace your existing slider CSS with this glassmorphism version 
-
-.outer__parent--box {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  /* Add gradient background for glassmorphism effect 
-  min-height: 100vh;
-  background: rgb(117, 14, 14);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Add floating background elements 
-.outer__parent--box::before,
-.outer__parent--box::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px);
-  animation: float 8s ease-in-out infinite;
-  z-index: 1;
-}
-
-.outer__parent--box::before {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 70%);
-  top: 15%;
-  left: 15%;
-  animation-delay: 0s;
-}
-
-.outer__parent--box::after {
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.01) 70%);
-  top: 60%;
-  right: 20%;
-  animation-delay: 3s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
-  33% { transform: translate(30px, -30px) scale(1.1); opacity: 0.9; }
-  66% { transform: translate(-20px, 20px) scale(0.9); opacity: 0.8; }
-}
-
-.hero-section {
-  text-align: center;
-  padding: 4rem 0;
-  position: relative;
-  z-index: 10;
-  /* Remove border, add glassmorphism styling 
-  border: none;
-}
-
-.hero-section h1 {
-  font-size: 3rem;
-  margin: 0 0 1rem 0;
-  /* Change to white for visibility on gradient background 
-  color: white;
-  font-weight: 300;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.hero-section p {
-  font-size: 1.2rem;
-  /* Change to white/light color 
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 1rem 0;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-}
-
-
-
-.ipad-slider:hover {
-  background: rgba(255, 255, 255, 0.15);
+/*new slider style*/
+/*.ipad-slider:hover {
+  background: rgb(69, 69, 123);
   transform: translateY(-2px);
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-}
-
+    0 12px 40px rgba(39, 37, 192, 0.15),
+    inset 0 1px 0 rgba(39, 37, 192, 0.15),
+    inset 0 -1px 0 rgba(39, 37, 192, 0.15);
+}*/
 
 .ipad-slider {
-  /* Use responsive width instead of fixed 600px 
-  width: min(600px, calc(100vw - 4rem)); /* Never exceed screen width minus padding 
-  max-width: 600px; /* Keep maximum size for large screens 
+  width: min(600px, calc(100vw - 4rem));
+  max-width: 600px; 
   height: 120px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(53, 98, 211);
   backdrop-filter: blur(25px);
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 60px;
@@ -251,15 +139,14 @@ projects__display--box is parent the outer box*/
   z-index: 10;
 }
 
-/* Update the handle to be proportional 
+
 .inside__slider-circle {
-  /* Make handle width proportional to container 
-  width: calc(50% - 16px); /* 50% of container minus padding 
-  height: calc(100% - 16px); /* Full height minus padding 
+  width: calc(30% - 20px); 
+  height: calc(100% - 25px); 
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: calc(60px - 8px); /* Match container radius minus padding 
+  border-radius: calc(60px - 8px); 
   top: 8px;
   left: 8px;
   position: absolute;
@@ -270,35 +157,26 @@ projects__display--box is parent the outer box*/
     inset 0 -1px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* When moved, slide to the right position 
-.inside__slider-circle.moved {
-  left: calc(50% + 8px); /* Move to right half of container 
-  background: rgba(255, 255, 255, 0.3);
-}
 
-/* Add text labels inside the slider 
-.slider-text {
+/*.inside__slider-circle.moved {
+  left: calc(50% + 16px);
+  background: rgba(161, 92, 92, 0.3);
+}*/
+
+.slider-text { /*word;  projects*/
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   font-size: 32px;
   font-weight: 300;
-  color: white;
+  color: rgb(0, 0, 0);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-  transition: all 0.4s ease;
   letter-spacing: 1px;
-}
-
-.slider-text.left {
-  left: 60px;
 }
 
 .slider-text.right {
   right: 60px;
 }
 
-/* Text animation when slider moves 
 .ipad-slider.active .slider-text.left {
   opacity: 0.6;
   transform: translateY(-50%) scale(0.95);
@@ -308,6 +186,8 @@ projects__display--box is parent the outer box*/
   opacity: 0.6;
   transform: translateY(-50%) scale(0.95);
 }
+/*
+/* Replace your existing slider CSS with this glassmorphism version 
 
 /* Projects section styling for dark background 
 .projects__display--box {
@@ -343,53 +223,6 @@ projects__display--box is parent the outer box*/
 }
 
 
-@media (max-width: 768px) {
-  .ipad-slider {
-    width: 400px;
-    height: 80px;
-    border-radius: 40px;
-  }
 
-  .inside__slider-circle {
-    width: 190px;
-    height: 68px;
-    border-radius: 34px;
-  }
-
-  .inside__slider-circle.moved {
-    left: 202px;
-  }
-
-  .slider-text {
-    font-size: 24px;
-  }
-
-  .slider-text.left {
-    left: 40px;
-  }
-
-  .slider-text.right {
-    right: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .ipad-slider {
-    width: 320px;
-    height: 70px;
-  }
-
-  .inside__slider-circle {
-    width: 150px;
-    height: 58px;
-  }
-
-  .inside__slider-circle.moved {
-    left: 162px;
-  }
-
-  .slider-text {
-    font-size: 20px;
-  }
 }*/
 
