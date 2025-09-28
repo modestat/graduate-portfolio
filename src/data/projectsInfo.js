@@ -2,10 +2,19 @@ import afterStudies from "../assets/projects/studyplatform/afterStudies.png";
 import emptyProject from '../assets/projects/studyplatform/emptyProject.png';
 import recruit from '../assets/projects/studyplatform/recruit.png';
 import studyplatform from "../assets/studyplatform.png";
-import placeholder from "../assets/projects/twitter/placeholder.png";
 import something from "../assets/projects/somehting/something.png";
 import upcoming from "../assets/projects/webtingenes/upcoming.png";
 
+// images for twitter-remake project
+import login from "../assets/projects/twitter/login.png";
+import fastapi from "../assets/projects/twitter/fastapi.png";
+import fastapi2 from "../assets/projects/twitter/fastapi2.png";
+import homepage from "../assets/projects/twitter/homepage.png";
+import post from "../assets/projects/twitter/post.png";
+import profileSettings from "../assets/projects/twitter/profileSettings.png";
+import settingsColor from "../assets/projects/twitter/settingsColor.png";
+import signup from "../assets/projects/twitter/signup.png";
+/********************************************* */
 
 export const projects = [
   {
@@ -46,19 +55,55 @@ export const projects = [
       description: "twitter clone",
       date: "spring 2025",
       buttonText: "View code",
-      mainImage: placeholder,
+      mainImage: login,
     
      images: [
        {
-         src: emptyProject,
+         src: signup,
          alt: "Empty project state",
          caption: "Clean interface when starting a new project"
        },
+       {
+        src: login,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+      },
+      {
+        src: homepage,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+      },
+      {
+        src: post,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+      },
+      {
+        src: profileSettings,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+      },
+      {
+        src: settingsColor,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+      },
+      {
+        src: fastapi,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+      },
+      {
+        src: fastapi2,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+      },
      ],
     technologies: "Python, React, FastAPI, PostgreSQL, Docker, Render",
     github: "https://github.com/yourusername/studyplatform",
-    longDescription: "A web application for creating and managing"
+    longDescription: "For this project, I with another student from same Bachelor program created a twitter clone. The main focus for this project was to learn FastAPI and how to work with REST APIs. I worked on both the frontend and backend, implementing user authentication, tweet creation, and profile management features. This project helped me understand web application architecture, API design, and database integration using PostgreSQL. I also gained experience with Docker for containerization and Render for deployment, load balancer and how caching works."
     },
+
     {
       id: 3,
       slug: "somehting",
@@ -82,21 +127,8 @@ export const projects = [
     {
       id: 4,
       slug: "upcoming",
-      title: "upcomming",
-      description: "twitter clone",
-      date: "fall 2025",
-      buttonText: "View code",
-      mainImage: upcoming,
-    
-     images: [
-       {
-         src: emptyProject,
-         alt: "Empty project state",
-         caption: "Clean interface when starting a new project"
-       },
-     ],
-    technologies: "",
-    github: "https://github.com/yourusername/studyplatform",
-    longDescription: "An upcoming project in course tingenes web"
+      title: "Upcomming",
+      description: "A project that will be developed as part of course tingenes web, along with 3 interaction design students and 2 other developers from the same bachelor course",
+      date: "fall 2025"
     }
   ];
