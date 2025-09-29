@@ -19,7 +19,7 @@ const ProjectDetail = () => {
     <div className='project-detail'>
         <h1>{project.title}</h1>
         <p>{project.description}</p>
-        <p>Date: {project.date}</p>
+   
     </div>
   )
 }

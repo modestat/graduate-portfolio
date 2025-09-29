@@ -51,9 +51,9 @@ export const projects = [
     {
       id: 2,
       slug: "twitter clone",
-      title: "twitter clone",
-      description: "twitter clone",
-      date: "spring 2025",
+      title: "Twitter clone",
+      description: "Remake of partial twitter",
+      date: "Spring 2025",
       buttonText: "View code",
       mainImage: login,
     

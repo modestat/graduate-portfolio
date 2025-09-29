@@ -17,7 +17,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
          {/*} <Route path="/projects" element={<Myprojects />} /> */}
           <Route path="/project/:slug" element={<ProjectDetail />} />
-          { /*<Route path="*" element={<NotFound />} /> /* Catch-all for unmatched routes */}
+          { /*TODO: <Route path="*" element={<NotFound />} /> /* Catch-all for unmatched routes */}
         </Routes>
         <Footer />
       </BrowserRouter>

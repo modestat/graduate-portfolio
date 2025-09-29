@@ -143,14 +143,16 @@ const HomePage = () => {
         <div className="project-detail--out">
           <h2>{selectedProject.title}</h2>
           <p>{selectedProject.description}</p>
-          <p>Date: {selectedProject.date}</p>
+          <p> {selectedProject.date}</p>
           <p>Technologies: {selectedProject.technologies}</p>
 
           {/*chck if data exist; data = selectedProject.images */}
           {selectedProject.images && (
             <div className="project-images--gallery">
-               <button onClick={goToPrevious}>Previous</button>
-               <button onClick={goToNextImage}>next</button>
+              <div className='carousel-buttons'>
+                 <button onClick={goToPrevious}>&lt;</button>
+                 <button onClick={goToNextImage}>&gt;</button>
+               </div>
               <div className="project-image-item">
                   <img src={selectedProject.images[imageNumber].src} />
                    <p className="caption">{selectedProject.images[imageNumber].caption}</p>
