@@ -152,21 +152,21 @@ export const projects = [
       id: 3,
       slug: "somehting",
       title: "somehting",
-      description: "twitter clone",
-      date: "spring 2025",
+      description: "",
+      date: "",
       buttonText: "View code",
       mainImage: something,
     
      images: [
        {
-         src: emptyProject,
+        
          alt: "Empty project state",
          caption: "Clean interface when starting a new project"
        },
      ],
-    technologies: "Python, React, FastAPI, PostgreSQL, Docker, Render",
+    technologies: "",
     github: "https://github.com/yourusername/studyplatform",
-    longDescription: "A web application for creating and managing"
+    longDescription: ""
     },
     {
       id: 4,
