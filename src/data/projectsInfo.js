@@ -38,20 +38,55 @@ export const projects = [
      // All images for the gallery
      images: [
        {
-         src: emptyProject,
+         src: dashboard,
          alt: "Empty project state",
          caption: "Clean interface when starting a new project"
        },
        {
-         src: recruit,
+        src: dashboardSettings,
+        alt: "Post-study analysis",
+        caption: "Analysis view after completing studies"
+      },
+       {
+         src: createStudy,
          alt: "Participant recruitment",
          caption: "Tool for recruiting study participants"
        },
        {
-         src: afterStudies,
+         src: createstudySettings,
          alt: "Post-study analysis",
          caption: "Analysis view after completing studies"
        },
+      {
+        src: recruitLink,
+        alt: "Post-study analysis",
+        caption: "Analysis view after completing studies"
+      },
+      {
+        src: recruitEmail,
+        alt: "Post-study analysis",
+        caption: "Analysis view after completing studies"
+      },
+      {
+        src: takeSurvey,
+        alt: "Post-study analysis",
+        caption: "Analysis view after completing studies"
+      },
+      {
+        src: surveyDemog,
+        alt: "Post-study analysis",
+        caption: "Analysis view after completing studies"
+      },
+      {
+        src: exportdata,
+        alt: "Post-study analysis",
+        caption: "Analysis view after completing studies"
+      },
+      {
+        src: userFlowDiagram,
+        alt: "Post-study analysis",
+        caption: "Analysis view after completing studies"
+      },
      ],
     technologies: "React, Node.js, Express, MongoDB, Docker, GitHub Actions",
     github: "https://github.com/yourusername/studyplatform",
