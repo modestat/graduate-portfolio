@@ -211,3 +211,13 @@
   background: #d1d5db;
 }
 
+/* Mobile version */
+@media (max-width: 768px) {
+  .projects__display--box {
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto; /* Let rows size naturally */
+    gap: 15px;
+    padding: 0 1rem;
+  }
+  
+}
