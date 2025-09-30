@@ -1,7 +1,3 @@
-import afterStudies from "../assets/projects/studyplatform/afterStudies.png";
-import emptyProject from '../assets/projects/studyplatform/emptyProject.png';
-import recruit from '../assets/projects/studyplatform/recruit.png';
-import studyplatform from "../assets/studyplatform.png";
 import something from "../assets/projects/somehting/something.png";
 import upcoming from "../assets/projects/webtingenes/upcoming.png";
 
@@ -16,6 +12,19 @@ import settingsColor from "../assets/projects/twitter/settingsColor.png";
 import signup from "../assets/projects/twitter/signup.png";
 /********************************************* */
 
+// images for studyplatform project
+import dashboard from "../assets/projects/studyplatform/dashboard.png";
+import dashboardSettings from "../assets/projects/studyplatform/dashboardSettings.png";
+import createStudy from "../assets/projects/studyplatform/createStudy.png";
+import createstudySettings from "../assets/projects/studyplatform/createstudySettings.png";
+import exportdata from "../assets/projects/studyplatform/exportdata.png";
+import recruitEmail from "../assets/projects/studyplatform/recruitEmail.png";
+import recruitLink from "../assets/projects/studyplatform/recruitLink.png";
+import surveyDemog from "../assets/projects/studyplatform/surveyDemog.png";
+import takeSurvey from "../assets/projects/studyplatform/takeSurvey.png";
+import userFlowDiagram from "../assets/projects/studyplatform/userFlowDiagram.png";
+/********************************************* */
+
 export const projects = [
   {
     id: 1,
@@ -24,7 +33,7 @@ export const projects = [
     description: "A platform for researchers to help create and conduct studies",
     date: "Spring 2025",
     buttonText: "View Code",
-    mainImage: studyplatform,
+    mainImage: dashboard,
     
      // All images for the gallery
      images: [
