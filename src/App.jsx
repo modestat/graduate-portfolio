@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {HashRouter, Routes, Route} from 'react-router-dom';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 //import Myprojects from './pages/Projects';
@@ -10,7 +10,7 @@ import ProjectDetail from './pages/ProjectDetail';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -20,7 +20,7 @@ function App() {
           { /*TODO: <Route path="*" element={<NotFound />} /> /* Catch-all for unmatched routes */}
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }

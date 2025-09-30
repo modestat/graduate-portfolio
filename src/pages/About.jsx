@@ -1,5 +1,5 @@
 import profileOfModesta from "../assets/profileOfModesta.jpg";
-import './styles/AboutPage.css';
+import './styles/aboutPage.css';
 
 const AboutPage = () => {
   return (
