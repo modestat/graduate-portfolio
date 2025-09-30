@@ -39,53 +39,53 @@ export const projects = [
      images: [
        {
          src: dashboard,
-         alt: "Empty project state",
-         caption: "Clean interface when starting a new project"
+         alt: "Dashboard showing multiple studies with status indicators",
+        caption: "Central management hub displaying all studies with filtering by status, response counts, and quick access to edit, export, and recruitment tools"
        },
        {
         src: dashboardSettings,
-        alt: "Post-study analysis",
-        caption: "Analysis view after completing studies"
+        alt: "dashboard settings for created studies",
+        caption: "dashboard settings for created studies"
       },
        {
          src: createStudy,
-         alt: "Participant recruitment",
-         caption: "Tool for recruiting study participants"
+         alt: "Artifact upload interface with file selection",
+        caption: "Researchers can upload multiple media types (images, video, audio, text) for use in study questions"
        },
        {
          src: createstudySettings,
-         alt: "Post-study analysis",
-         caption: "Analysis view after completing studies"
+          alt: "Question configuration panel showing rating types",
+          caption: "Flexible question builder with 8 rating types including multiple choice, star rating, emoji, and label slider options"
        },
       {
         src: recruitLink,
-        alt: "Post-study analysis",
-        caption: "Analysis view after completing studies"
+         alt: "Study recruitment page with shareable URL",
+         caption: "Generate public links for participant recruitment with publish/unpublish toggle for study control"
       },
       {
         src: recruitEmail,
-        alt: "Post-study analysis",
-        caption: "Analysis view after completing studies"
+        alt: "Email invitation form for participants",
+        caption: "Batch email invitation system allowing researchers to invite participants with customizable message"
       },
       {
         src: takeSurvey,
-        alt: "Post-study analysis",
-        caption: "Analysis view after completing studies"
+        alt: "Participant survey view with emoji rating scale",
+        caption: "Clean, focused interface presenting one question at a time with auto-save after each response"
       },
       {
         src: surveyDemog,
-        alt: "Post-study analysis",
-        caption: "Analysis view after completing studies"
+         alt: "Demographics information collection form",
+        caption: "Demographics information collection form"
       },
       {
         src: exportdata,
-        alt: "Post-study analysis",
-        caption: "Analysis view after completing studies"
+        alt: "Data export interface with response preview",
+        caption: "View participant responses with demographics and export data in CSV or JSON format for analysis"
       },
       {
         src: userFlowDiagram,
-        alt: "Post-study analysis",
-        caption: "Analysis view after completing studies"
+         alt: "System architecture and user flow diagram",
+         caption: "Application architecture showing researcher and participant workflows from authentication through study completion"
       },
      ],
     technologies: "React, Node.js, Express, MongoDB, Docker, GitHub Actions",
