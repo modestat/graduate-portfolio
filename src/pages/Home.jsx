@@ -143,8 +143,8 @@ const HomePage = () => {
         <div className="project-detail--out">
           <h2>{selectedProject.title}</h2>
           <p>{selectedProject.description}</p>
-          <p> {selectedProject.date}</p>
-          <p>Technologies: {selectedProject.technologies}</p>
+          <p className="project-date"> {selectedProject.date}</p>
+          <p className="project-tech">Technologies: {selectedProject.technologies}</p>
 
           {/*chck if data exist; data = selectedProject.images */}
           {selectedProject.images && (
@@ -161,7 +161,7 @@ const HomePage = () => {
           )}
 
           <p>{selectedProject.longDescription}</p>
-          <button className="close-project-detail" onClick={() => setSelectedProject(null)}>Close</button> 
+          <button className="close-project-detail" onClick={() => setSelectedProject(null)}>X</button> 
         </div>
         </>
       )}
