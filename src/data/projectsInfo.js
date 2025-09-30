@@ -89,7 +89,7 @@ export const projects = [
       },
      ],
     technologies: "React, Node.js, Express, MongoDB, Docker, GitHub Actions",
-    github: "https://github.com/yourusername/studyplatform",
+    github: "https://github.com/sabria23/Idg2671-project",
     longDescription: "A web application for creating and managing research surveys, built as a team project with 3 other students. This course focused on agile development practices and working with a product owner. I developed the dashboard page, data export functionality, and participant recruitment features, working across both frontend (React) and backend (Node.js/Express with MongoDB). I also handled deployment setup using GitHub Actions and Docker for the backend service. This project taught me full-stack development, REST API design, team collaboration, and DevOps basics.",
   },
     {
@@ -144,7 +144,7 @@ export const projects = [
       },
      ],
     technologies: "Python, React, FastAPI, PostgreSQL, Docker, Render",
-    github: "https://github.com/yourusername/studyplatform",
+    github: "https://github.com/viljaah/twitter-remake-2",
     longDescription: "For this project, I with another student from same Bachelor program created a twitter clone. The main focus for this project was to learn FastAPI and how to work with REST APIs. I worked on both the frontend and backend, implementing user authentication, tweet creation, and profile management features. This project helped me understand web application architecture, API design, and database integration using PostgreSQL. I also gained experience with Docker for containerization and Render for deployment, load balancer and how caching works."
     },
 
