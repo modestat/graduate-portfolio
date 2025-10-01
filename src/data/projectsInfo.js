@@ -1,6 +1,3 @@
-import something from "../assets/projects/somehting/something.png";
-import upcoming from "../assets/projects/webtingenes/upcoming.png";
-
 // images for twitter-remake project
 import login from "../assets/projects/twitter/login.png";
 import fastapi from "../assets/projects/twitter/fastapi.png";
@@ -23,6 +20,13 @@ import recruitLink from "../assets/projects/studyplatform/recruitLink.png";
 import surveyDemog from "../assets/projects/studyplatform/surveyDemog.png";
 import takeSurvey from "../assets/projects/studyplatform/takeSurvey.png";
 import userFlowDiagram from "../assets/projects/studyplatform/userFlowDiagram.png";
+/********************************************* */
+
+// images for accessibility project
+import landingPage from "../assets/projects/accessibility/landingPage.png";
+import tutorialPage1 from "../assets/projects/accessibility/tutorialPage1.png";
+import tutorialPage2 from "../assets/projects/accessibility/tutorialPage2.png";
+import form3 from "../assets/projects/accessibility/form3.png";
 /********************************************* */
 
 export const projects = [
@@ -151,28 +155,43 @@ export const projects = [
 
     {
       id: 3,
-      slug: "somehting",
-      title: "somehting",
+      slug: "accessibility project",
+      title: "Accessibility project",
       description: "",
       date: "",
       buttonText: "View code",
-      mainImage: something,
+      mainImage: landingPage,
     
      images: [
        {
-        
-         alt: "Empty project state",
-         caption: "Clean interface when starting a new project"
+        src: landingPage,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+       },
+       {
+        src: tutorialPage1,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+       },
+       {
+        src: tutorialPage2,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
+       },
+       {
+        src: form3,
+        alt: "Empty project state",
+        caption: "Clean interface when starting a new project"
        },
      ],
-    technologies: "",
-    github: "https://github.com/yourusername/studyplatform",
+    technologies: "HTML, CSS",
+    github: "https://github.com/modestat/assigment-4",
     longDescription: ""
     },
     {
       id: 4,
-      slug: "upcoming",
-      title: "Upcomming",
+      slug: "upcoing",
+      title: "Upcoming",
       description: "A project that will be developed as part of course tingenes web, along with 3 interaction design students and 2 other developers from the same bachelor course",
       date: "Fall 2025",
       buttonText: "Coming Soon",
