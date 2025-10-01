@@ -29,24 +29,45 @@
   
   .project__card button {
     bottom: 20px;
-    background: rgba(73, 41, 41, 0.2);
+    background: rgba(86, 30, 30, 0.924);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 8px 16px;
     border-radius: 10px;
     font-size: 0.9rem;
   }
   
-  /* Dark overlay for text readability */
+  /* dark overlay for text readability */
   .project__card::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 40%;
-    background: linear-gradient(transparent, rgba(20, 3, 114, 0.7));
+    height: 50%;
+    background: linear-gradient(transparent, rgba(143, 15, 15, 0.85));
   }
 
+  .project__card h2 {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(-1px);
+    border-radius: 4px;
+  }
+/* to: darken whole image */
+  .project__card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+  }
+  
+  .project__card h2,
+  .project__card button {
+    z-index: 2; 
+  }
+  
   @media (max-width: 768px) {
     .project__card img {
       height: 200px;

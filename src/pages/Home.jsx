@@ -4,15 +4,12 @@ import { projects } from '../data/projectsInfo';
 import {useState} from 'react';
 /**
  * 
- * TODO: style better clean in code (maybe move the drag functions to a custom hook)
- * For Desktop (Mouse):
-
+For Desktop (Mouse):
 onMouseDown - User presses mouse button on slider
 onMouseMove - User drags while holding button
 onMouseUp - User releases mouse button
 
 For Mobile (Touch):
-
 onTouchStart - User touches slider
 onTouchMove - User drags finger
 onTouchEnd - User lifts finger
