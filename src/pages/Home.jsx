@@ -88,6 +88,7 @@ const HomePage = () => {
       setImageNumber(imageNumber - 1);
     }
   }
+
   return (
     <div className="outer__parent--box">
       {!showWork && ( // Show hero when showWork is FALSE
@@ -142,6 +143,13 @@ const HomePage = () => {
         <>
         <div className="project-detail--out">
           <h2>{selectedProject.title}</h2>
+          {/*selecte the useStatevairbale attach to it data name from data.js and render with && operater; only show if it exists */}
+          {selectedProject.overview &&(
+            <p className="project-overview">{selectedProject.overview}</p>
+          )}
+          {selectedProject.myRole && (
+            <p className="project-myrole">My Role: {selectedProject.myRole}</p>
+          )}
           <p>{selectedProject.description}</p>
           <p className="project-date"> {selectedProject.date}</p>
           <p className="project-tech">Technologies: {selectedProject.technologies}</p>

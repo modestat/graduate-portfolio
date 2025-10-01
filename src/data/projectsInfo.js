@@ -96,7 +96,7 @@ export const projects = [
       id: 2,
       slug: "twitter clone",
       title: "Twitter clone",
-      description: "Remake of partial twitter",
+      description: "Twitter remake paltform with scalable backend architecture",
       date: "Spring 2025",
       buttonText: "View code",
       mainImage: login,
@@ -104,48 +104,50 @@ export const projects = [
      images: [
        {
          src: signup,
-         alt: "Empty project state",
-         caption: "Clean interface when starting a new project"
+         alt: "User registration interface",
+         caption: "Account creation with form validation and error handling"
        },
        {
         src: login,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "User authentication page",
+        caption: "Login system with JWT token-based authentication"
       },
       {
         src: homepage,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "Main feed showing tweets",
+        caption: "Homepage displaying tweets with like functionality and user interactions"
       },
       {
         src: post,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "Tweet creation interface",
+        caption: "Post creation form with submission"
       },
       {
         src: profileSettings,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "User profile management",
+        caption: "Account settings allowing users to update profile information"
       },
       {
         src: settingsColor,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "Theme customization interface",
+        caption: "Color scheme customization for personalized user experience"
       },
       {
         src: fastapi,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "FastAPI auto-generated documentation",
+        caption: "Interactive API documentation showing available endpoints"
       },
       {
         src: fastapi2,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "FastAPI auto-generated documentation",
+        caption: "Interactive API documentation showing available endpoints"
       },
      ],
-    technologies: "Python, React, FastAPI, PostgreSQL, Docker, Render",
+    technologies: "Python, React, FastAPI, PostgreSQL, Docker, Nginx, Render",
     github: "https://github.com/viljaah/twitter-remake-2",
-    longDescription: "For this project, I with another student from same Bachelor program created a twitter clone. The main focus for this project was to learn FastAPI and how to work with REST APIs. I worked on both the frontend and backend, implementing user authentication, tweet creation, and profile management features. This project helped me understand web application architecture, API design, and database integration using PostgreSQL. I also gained experience with Docker for containerization and Render for deployment, load balancer and how caching works."
+    overview: "A full-stack social media application built in two phases. Started with core features like posting, authentication, and user management. Later expanded with load balancing and caching to handle high traffic scenarios.",
+    myRole: "Built user authentication and account management system. Implemented load balancer with Nginx and multi-layer caching architecture. Added follow/unfollow functionality. Worked on both frontend (React) and backend (FastAPI/PostgreSQL).",
+    longDescription: "Two-phase project for a web systems course. First phase focused on building a RESTful API with user management, tweets, and search. Second phase added scalability features - load balancing, caching layers, and batch processing for high-volume operations like likes. Deployed as microservices on Render. This project taught me practical distributed systems concepts and API design while learning React simultaneously."
     },
 
     {
