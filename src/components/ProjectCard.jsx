@@ -29,8 +29,15 @@ const ProjectCard = (props) => {
   return (
     // div + onclick to open slide-out panel
     <div className="project__card" onClick={() => props.onProjectClick(props.project)}> 
-    {/*Shows whatever image is stored in props.project.mainImage in data.js*/}
-          <img src={props.project.mainImage} alt={`screenshot of` } />
+    {/*Shows whatever image is stored in props.project.mainImage in data.js
+     - if image exists show it or else dispaly the cooming soon text*/}
+          {props.project.mainImage ? (
+            <img src={props.project.mainImage} alt={props.title} />
+          ) : (
+            <div className="coming-soon-placeholder">
+              <p>Coming Soon</p>
+            </div>
+          )}
           <h2>{props.title}</h2>
           <button onClick={viewCodeBtn}>{props.buttonText}</button>
     </div>

@@ -224,6 +224,7 @@
 @media (max-width: 768px) {
   .projects__display--box {
     grid-template-columns: 1fr; /* Single column */
+    max-width: 100%;
     padding: 0 1rem;
   }
   

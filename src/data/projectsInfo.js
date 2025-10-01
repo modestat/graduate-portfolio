@@ -174,6 +174,10 @@ export const projects = [
       slug: "upcoming",
       title: "Upcomming",
       description: "A project that will be developed as part of course tingenes web, along with 3 interaction design students and 2 other developers from the same bachelor course",
-      date: "fall 2025"
+      date: "Fall 2025",
+      buttonText: "Coming Soon",
+      mainImage: null, 
+      comingSoon: true, 
+      comingSoonMessage: "Project starts Fall 2025"
     }
   ];
