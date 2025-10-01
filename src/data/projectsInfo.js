@@ -146,8 +146,7 @@ export const projects = [
     technologies: "Python, React, FastAPI, PostgreSQL, Docker, Nginx, Render",
     github: "https://github.com/viljaah/twitter-remake-2",
     overview: "A full-stack social media application built in two phases. Started with core features like posting, authentication, and user management. Later expanded with load balancing and caching to handle high traffic scenarios.",
-    myRole: "Built user authentication and account management system. Implemented load balancer with Nginx and multi-layer caching architecture. Added follow/unfollow functionality. Worked on both frontend (React) and backend (FastAPI/PostgreSQL).",
-    longDescription: "Two-phase project for a web systems course. First phase focused on building a RESTful API with user management, tweets, and search. Second phase added scalability features - load balancing, caching layers, and batch processing for high-volume operations like likes. Deployed as microservices on Render. This project taught me practical distributed systems concepts and API design while learning React simultaneously."
+    myRole: "I built user authentication and account management (register, login, search). Implemented Nginx load balancer with least-connections algorithm. Created multi-layer caching (API cache + DB cache) with Python. Added follow/unfollow system with follower counts and deployed to Render with separate microservices for frontend/backend"
     },
 
     {

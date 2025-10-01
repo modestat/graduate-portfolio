@@ -36,6 +36,8 @@ const HomePage = () => {
  // this funciton saves which project was saved
   const openProjectDetail = (project) => { // arrow funciton that takes different projects as arguments and waits until user lcikcs on it, once clicked it will show the 2/3 view width informaiton about that specific project
     setSelectedProject(project);
+    document.body.classList.add('no-scroll'); // Add class to body to prevent background scrolling
+
   }
 
   //Remember that dragging has started
@@ -143,15 +145,17 @@ const HomePage = () => {
         <>
         <div className="project-detail--out">
           <h2>{selectedProject.title}</h2>
+          <p className="project-date"> {selectedProject.date}</p>
+
           {/*selecte the useStatevairbale attach to it data name from data.js and render with && operater; only show if it exists */}
           {selectedProject.overview &&(
             <p className="project-overview">{selectedProject.overview}</p>
           )}
+
           {selectedProject.myRole && (
             <p className="project-myrole">My Role: {selectedProject.myRole}</p>
           )}
-          <p>{selectedProject.description}</p>
-          <p className="project-date"> {selectedProject.date}</p>
+
           <p className="project-tech">Technologies: {selectedProject.technologies}</p>
 
           {/*chck if data exist; data = selectedProject.images */}
@@ -169,7 +173,10 @@ const HomePage = () => {
           )}
 
           <p>{selectedProject.longDescription}</p>
-          <button className="close-project-detail" onClick={() => setSelectedProject(null)}>X</button> 
+          <button className="close-project-detail" 
+          onClick={() => {
+            setSelectedProject(null);
+            document.body.classList.remove('no-scroll');}}>X</button> 
         </div>
         </>
       )}
