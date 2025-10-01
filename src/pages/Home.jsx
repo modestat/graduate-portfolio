@@ -152,8 +152,11 @@ const HomePage = () => {
           {selectedProject.myRole && (
             <p className="project-myrole">My Role: {selectedProject.myRole}</p>
           )}
-
-          <p className="project-tech">Technologies: {selectedProject.technologies}</p>
+          
+          {selectedProject.technologies &&(
+            <p className="project-overview">Technologies: {selectedProject.technologies}</p>
+          )}
+  
 
           {/*chck if data exist; data = selectedProject.images */}
           {selectedProject.images && (
@@ -182,7 +185,7 @@ const HomePage = () => {
 
     </div>
   )
-        }
+  }
 
 export default HomePage
 

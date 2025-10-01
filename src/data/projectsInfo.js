@@ -158,30 +158,29 @@ export const projects = [
       slug: "accessibility project",
       title: "Accessibility project",
       description: "",
-      date: "",
+      date: "Fall 2024",
       buttonText: "View code",
       mainImage: landingPage,
-    
      images: [
        {
         src: landingPage,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "",
+        caption: ""
        },
        {
         src: tutorialPage1,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "",
+        caption: ""
        },
        {
         src: tutorialPage2,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "",
+        caption: ""
        },
        {
         src: form3,
-        alt: "Empty project state",
-        caption: "Clean interface when starting a new project"
+        alt: "",
+        caption: ""
        },
      ],
     technologies: "HTML, CSS",
@@ -192,7 +191,7 @@ export const projects = [
       id: 4,
       slug: "upcoing",
       title: "Upcoming",
-      description: "A project that will be developed as part of course tingenes web, along with 3 interaction design students and 2 other developers from the same bachelor course",
+      longDescription: "A project that will be developed as part of course tingenes web, along with 3 interaction design students and 2 other developers from the same bachelor course",
       date: "Fall 2025",
       buttonText: "Coming Soon",
       mainImage: null, 
