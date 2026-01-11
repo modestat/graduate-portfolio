@@ -1,6 +1,5 @@
 import {NavLink} from 'react-router-dom';
 import {useState} from 'react';
-import {Menu, X} from 'lucide-react';
 import './styles/Navbar.css'; 
 
 const Navbar = () => {
@@ -13,7 +12,20 @@ const Navbar = () => {
           className="hamburger-btn" 
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? (
+            // X ikon
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          ) : (
+            // hamburger ikon
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          )}
         </button>
       </nav>
 
