@@ -83,6 +83,8 @@
   padding: 10px 16px;
   display: flex;
   align-items: center;
+  position: relative;  
+  z-index: 201;   /*må ha z-index fordi button (pga style isseus) fungerte ikke etter eg endret navbar*/
 }
 
 .back-button:hover {

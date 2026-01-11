@@ -26,9 +26,14 @@ const HomePage = () => {
 
   const [imageNumber, setImageNumber] = useState(0); // state to track which image is being shown in the project detail view from array in the data.js
 
-  const toggleSlider = () => {
-    setShowWork(!showWork); //basically the the onclick event is triggered it calles the toggelSLider funciton and since the initialze value of the showing part is false it shows the hero seciton, but since inside the funciton we have spezidied that it need to not be false aka true when the funciton is triggered it shows the content of the projects
-    //maybe redirect to the work page? 
+  const goBackToHome = () => {
+    setShowWork(false);  // Sett eksplisitt til false
+    setSelectedProject(null);
+    setImageNumber(0);
+    setIsDragging(false);
+    setStartX(0);
+    setCurrentX(0);
+    document.body.classList.remove('no-scroll');
   }
  // this funciton saves which project was saved
   const openProjectDetail = (project) => { // arrow funciton that takes different projects as arguments and waits until user lcikcs on it, once clicked it will show the 2/3 view width informaiton about that specific project
@@ -122,7 +127,7 @@ const HomePage = () => {
      
      {showWork && ( //Show projects when TRUE
      <>
-      <button onClick={toggleSlider} className="back-button">← Back</button>
+      <button onClick={goBackToHome} className="back-button">Back to home</button>
       <div className="projects__display--box">
         {projects.map(project => (
           <ProjectCard 
