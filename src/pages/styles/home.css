@@ -191,8 +191,9 @@
   transform: translateY(-50%) scale(0.95);
 }
 
-.carousel-buttons {
-  position: relative;
+.project-image-item {
+  position: relative; 
+  overflow: visible;
 }
 
 .carousel-buttons button {
@@ -204,13 +205,14 @@
   font-size: 1.2rem;
   position: absolute;
   top: 50%; 
-  transform: translateY(300%); 
-  z-index: 10;
+  transform: translateY(-50%); 
+  z-index: 11;
 }
 
 .carousel-buttons button:first-child {
   left: -37px; 
 }
+
 .carousel-buttons button:last-child {
   right: -37px; 
 }

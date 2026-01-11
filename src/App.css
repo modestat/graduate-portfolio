@@ -2,11 +2,35 @@
 typically applies in react -> app wide layout rules (like grid, wrapper, background)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400;0,600&family=Bebas+Neue&display=swap');
+
+body {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #2a2a2a; /* Soft black, ikke harsh */
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+/* Bohemian touch */
+.project-card p {
+  font-style: italic; /* Litt italic på beskrivelser */
+  opacity: 0.9;
+}
 
 html, body, #root{
     height:100%;
-    font-family: 'Crimson Text', serif;
 }
 
 #root {

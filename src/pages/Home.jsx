@@ -161,13 +161,13 @@ const HomePage = () => {
           {/*chck if data exist; data = selectedProject.images */}
           {selectedProject.images && (
             <div className="project-images--gallery">
-              <div className='carousel-buttons'>
-                 <button onClick={goToPrevious}>&lt;</button>
-                 <button onClick={goToNextImage}>&gt;</button>
-               </div>
               <div className="project-image-item">
-                  <img src={selectedProject.images[imageNumber].src} />
-                   <p className="caption">{selectedProject.images[imageNumber].caption}</p>
+                <div className='carousel-buttons'>
+                  <button onClick={goToPrevious}>&lt;</button>
+                  <button onClick={goToNextImage}>&gt;</button>
+                </div>
+                <img src={selectedProject.images[imageNumber].src} />
+                <p className="caption">{selectedProject.images[imageNumber].caption}</p>
               </div>
             </div>
           )}

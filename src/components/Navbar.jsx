@@ -1,18 +1,33 @@
 import {NavLink} from 'react-router-dom';
+import {useState} from 'react';
+import {Menu, X} from 'lucide-react';
 import './styles/Navbar.css'; 
 
 const Navbar = () => {
-    return (
-        <nav className="navbar">
-          <div className="navbar-brand">
-            M. Trakselyte
-          </div>
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <>
+      <nav className="navbar">    
+        <button 
+          className="hamburger-btn" 
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </nav>
+
+      {/* fullscreen overlay - UTENFOR nav */}
+      {isOpen && (
+        <div className="fullscreen-menu">
           <ul className="navbar-links">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink></li>
+            <li><NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink></li>
           </ul>
-        </nav>
-      );
+        </div>
+      )}
+    </>
+  );
 };
 
 export default Navbar;
