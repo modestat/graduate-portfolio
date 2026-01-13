@@ -1,25 +1,15 @@
-.projects__display--box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 700px;
-  margin: 2rem auto;
-}
+/* home.css - Kun for LandingPage */
 
-/*the project__item is child the second div*/
 .outer__parent--box {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  /*
-  position: relative;
-  overflow: hidden;*/
 }
 
 .hero-section {
   text-align: center;
   padding: 4rem 0;
-  border-bottom: 1px solid #eee;
+  padding-top: 150px; /* Plass for navbar */
 }
 
 .hero-section h1 {
@@ -32,109 +22,13 @@
 .hero-section p {
   font-size: 1.2rem;
   color: #666;
-  margin: 0;
+  margin: 0.5rem 0;
 }
 
-.projects-section {
-  padding: 4rem 0;
-}
-
-.project-detail--out {
-  position: fixed;
-  right: 0;
-  width: 60%;
-  height: 80vh;
-  background-color: rgb(252, 244, 244);
-  top: 8%;
-  padding: 3rem;
-  box-shadow: -5px 0 15px rgba(180, 0, 0, 0.3);
-  z-index: 3;
-  overflow-y: auto; /* enable vertical scrolling since i have posoiton fixed*/
-  overflow-x: hidden; /*enable horizontal scrolling since i have posoiton fixed*/
-}
-
-/* project title */
-.project-detail--out h2 {
-  font-size: 2.5rem;
-  margin-bottom: -0.5rem;
-}
-.close-project-detail {
-  position: fixed;
-  top: 10%;
-  right: 5%;
-  background: transparent;
-  padding: 10px 20px;
-  font-size: 1rem; 
-  z-index: 4;
-  border: 1px solid black;
-  border-radius: 50%;
-  color: #333; 
-}
-
-/* some shadows to make it a bit viisble on dark bckg */
-.close-project-detail:hover {
-  color: #000;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-}
-
-.back-button {
-  background: #f5f5f5;
-  border: none;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  position: relative;  
-  z-index: 201;   /*må ha z-index fordi button (pga style isseus) fungerte ikke etter eg endret navbar*/
-}
-
-.back-button:hover {
-  background: #e0e0e0;
-}
-
-/*container for images*/
-.project-images-gallery {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.project-images-gallery h3 {
-  color: #333;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-/* each image wrapper*/
-.project-image-item {
-  margin-bottom: 25px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 100%;
-}
-
-.project-image-item img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  display: block;
-}
-
-/* for text  */
-.project-image-item .caption {
-  padding: 15px;
-  margin: 0;
-  color: #666;
-  font-size: 0.9rem;
-  background: white;
-  line-height: 1.4;
-}
-
+/* Slider */
 .ipad-slider {
   width: min(600px, calc(100vw - 4rem));
-  max-width: 600px; 
+  max-width: 600px;
   height: 120px;
   background: rgb(53, 98, 211);
   backdrop-filter: blur(25px);
@@ -144,32 +38,27 @@
   margin: 2rem auto;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   z-index: 10;
 }
 
-
 .inside__slider-circle {
-  width: calc(30% - 20px); 
-  height: calc(100% - 25px); 
+  width: calc(30% - 20px);
+  height: calc(100% - 25px);
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: calc(60px - 8px); 
+  border-radius: calc(60px - 8px);
   top: 8px;
   left: 8px;
   position: absolute;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4),
     inset 0 -1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.slider-text { /*word;  projects*/
+.slider-text {
   position: absolute;
   top: 50%;
   font-size: 32px;
@@ -177,59 +66,9 @@
   color: rgb(0, 0, 0);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   letter-spacing: 1px;
+  transform: translateY(-50%);
 }
 
 .slider-text.right {
   right: 60px;
-}
-
-.ipad-slider.active .slider-text.left {
-  opacity: 0.6;
-  transform: translateY(-50%) scale(0.95);
-}
-
-.ipad-slider:not(.active) .slider-text.right {
-  opacity: 0.6;
-  transform: translateY(-50%) scale(0.95);
-}
-
-.project-image-item {
-  position: relative; 
-  overflow: visible;
-}
-
-.carousel-buttons button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #e5e7eb;
-  border: none;
-  font-size: 1.2rem;
-  position: absolute;
-  top: 50%; 
-  transform: translateY(-50%); 
-  z-index: 11;
-}
-
-.carousel-buttons button:first-child {
-  left: -37px; 
-}
-
-.carousel-buttons button:last-child {
-  right: -37px; 
-}
-
-.carousel-buttons button:hover {
-  background: #d1d5db;
-}
-
-
-/* Mobile version */
-@media (max-width: 768px) {
-  .projects__display--box {
-    grid-template-columns: 1fr; /* Single column */
-    padding: 0 1rem;
-  }
- 
-  
 }

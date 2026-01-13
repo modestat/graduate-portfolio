@@ -1,26 +1,47 @@
-// NOT IN USE MAYBE ALTER
-import './styles/project.css';
-import { projects } from '../data/projectsInfo';
 import ProjectCard from '../components/ProjectCard';
-const Myprojects = () => {
+import ProjectDetail from '../components/ProjectDetail'; 
+import { projects } from '../data/projectsInfo';
+import { useProjectDetail } from '../hooks/useProjectDetail';
+import './styles/project.css';
+
+const ProjectsPage = () => {
+  const { 
+    selectedProject,
+    imageNumber,      // Legg til denne
+    openProject,
+    closeProject,
+    nextImage,        // Legg til denne
+    prevImage         // Legg til denne
+  } = useProjectDetail();
+
   return (
-    <div className="outer__parent--box">
-        <h1>Projects</h1>
-        <div className="project__display--box">
-           {projects.map(project => (
-            <ProjectCard
+    <div className="projects-container">
+      <div className="projects__display--box">
+        {projects.map(project => (
+          <ProjectCard 
             key={project.id}
             slug={project.slug}
             title={project.title}
             description={project.description}
             date={project.date}
             buttonText={project.buttonText}
-            variant="stacked"
-            />
-           ))}
+            project={project}
+            onProjectClick={openProject}
+          />
+        ))}
       </div>
+
+      {selectedProject && (
+        <ProjectDetail 
+          project={selectedProject}
+          imageNumber={imageNumber}      // Send imageNumber
+          onClose={closeProject}
+          onNextImage={nextImage}        // Send nextImage funksjon
+          onPrevImage={prevImage}        // Send prevImage funksjon
+        />
+      )}
     </div>
-  )
+  );
 }
 
-export default Myprojects
+export default ProjectsPage;

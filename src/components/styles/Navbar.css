@@ -15,7 +15,7 @@
   .hamburger-btn {
     background: transparent;
     border: none;
-    color: blue;
+    color: rgb(32, 32, 129);
     padding: 0.5rem;
   }
   
@@ -30,7 +30,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(23, 31, 50, 0.98);  
+    background-color: rgba(25, 31, 44, 0.98);  
     z-index: 200;
     /* for å sentere innholde av navlinks*/
     display: flex;
@@ -40,7 +40,7 @@
   
   @keyframes fadeIn {
     from { opacity: 0; }
-    to { opacity: 1; }
+    to { opacity: 0.98; }
   }
 
   .navbar-links {
@@ -54,18 +54,14 @@
   }
   
   .navbar-links a {
-    color: blue; 
+    color: rgb(239, 239, 239); 
     text-decoration: none;
     font-weight: 300; 
     font-size: 1.25rem;  
     letter-spacing: 0.3em;  
   }
   
-  .navbar-links a:hover {
-    color: #60a5fa;  
-  }
-  
   .navbar-links a.active {
-    color: blue;
+    color: rgb(219, 219, 221);
     border-bottom: none;  
   }

@@ -34,6 +34,7 @@ const Navbar = () => {
         <div className="fullscreen-menu">
           <ul className="navbar-links">
             <li><NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink></li>
+            <li><NavLink to="/projects" onClick={() => setIsOpen(false)}>Projects</NavLink></li>
             <li><NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink></li>
           </ul>
         </div>
