@@ -9,13 +9,13 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 300; /*TODO: FIX IN THESE OVARLL HUGE VALUES THROUGH CSS*/
   }
 
   .hamburger-btn {
     background: transparent;
     border: none;
-    color: rgb(32, 32, 129);
+    color: rgb(12, 12, 55);
     padding: 0.5rem;
   }
   
@@ -24,30 +24,39 @@
     border-radius: 8px;
   }
   
+.close-menu-btn {
+  color: white;
+}
   .fullscreen-menu {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(25, 31, 44, 0.98);  
+    background-color: rgba(25, 31, 44, 0.92);  /*last number is for the opacity of the bckg*/
     z-index: 200;
     /* for å sentere innholde av navlinks*/
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 2s ease forwards;
   }
   
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 0.98; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.98;
+    }
   }
+
 
   .navbar-links {
     list-style: none;
     display: flex;
     flex-direction: column; 
-    gap: 3rem;  /* større gap */
+    gap: 2rem;  /* større gap */
     margin: 0;
     padding: 0;
     text-align: center;

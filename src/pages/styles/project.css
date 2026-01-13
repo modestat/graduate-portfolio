@@ -1,10 +1,8 @@
-/* project.css - Kun styles for ProjectsPage */
-
 .projects-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    padding-top: 100px; /* Plass for navbar */
+    padding-top: 100px; 
   }
   
   .projects__display--box {
@@ -167,7 +165,7 @@
     }
   
     .project-detail--out {
-      width: 100%;
+      width: 79%;
       height: 100vh;
     }
   
