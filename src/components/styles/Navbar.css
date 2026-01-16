@@ -33,13 +33,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(25, 31, 44, 0.92);  /*last number is for the opacity of the bckg*/
+    background-color: rgba(16, 26, 47, 0.85);  /*last number is for the opacity of the bckg*/
+    backdrop-filter: blur(6px) saturate(150%); /* Blur + mørkere */
     z-index: 200;
     /* for å sentere innholde av navlinks*/
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 2s ease forwards;
+    animation: fadeIn 0.8s ease forwards;
   }
   
   @keyframes fadeIn {
@@ -47,7 +48,7 @@
       opacity: 0;
     }
     to {
-      opacity: 0.98;
+      opacity: 1;
     }
   }
 
