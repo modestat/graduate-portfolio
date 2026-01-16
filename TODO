@@ -1,4 +1,4 @@
-- create 404 page
+- design 404 page
 - have hooks (split of logics from home.jsx it is too overwelming - bad practice)
 - go through WSG - for better image and laoding perfomance (add lazy loading) (like optimize the images etc)
 - do lighthouse tetsing and see how can website be improved better (performance)
