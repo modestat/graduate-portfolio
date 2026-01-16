@@ -1,33 +1,31 @@
 import './App.css';
-import {HashRouter, Routes, Route, useLocation} from 'react-router-dom';
-import HomePage from './pages/Home';
-import AboutPage from './pages/About';
-import ProjectsPage from './pages/Projects';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import {HashRouter, Routes, Route} from 'react-router-dom';
+import React, {lazy, Suspense} from 'react'; //impelmentd lazy loading for the pages that needed that
+const HomePage = lazy(() => import('./pages/Home'));
+const AboutPage = lazy(() => import('./pages/About'));
+const ProjectsPage = lazy(() => import('./pages/Projects'));
+
+import Layout from './components/layouts/MainLayout';
 import NotFound from './pages/NotFound';
 
+//TODO: need error handling component for lazy laoding, if the network request for a lazy component fails, i need to handle the error using feks error boundary 
 
-// to handle conditional logic for the footer render
-const ConditionalFooter = () => {
-  const location = useLocation(); 
-  const noFooterPaths = ['/'];    // which paths shoudl not shwo the footer
-  const showFooter = !noFooterPaths.includes(location.pathname);   // then also check if the current path is in the noFooterPaths array
-  return showFooter ? <Footer /> : null;  // only render footer is showFooter is true
-};
+
 
 function App() {
   return (
     <>
       <HashRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectsPage />} /> 
-          <Route path="*" element={<NotFound />} /> 
-        </Routes>
-        <ConditionalFooter />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/projects" element={<ProjectsPage />} /> 
+               </Route>
+              <Route path="*" element={<NotFound />} /> 
+            </Routes>
+          </Suspense>
       </HashRouter>
     </>
   )

@@ -1,0 +1,12 @@
+/* Layout.css */
+.layout-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex: 1; /* Ta opp all tilgjengelig plass */
+    width: 100%;
+    /* IKKE sett height her - la innholdet bestemme */
+  }
