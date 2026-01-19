@@ -75,11 +75,6 @@
   position: relative;
 }
 
-.project__media::before,
-.project__media::after {
-  pointer-events: none;
-}
-
 
 /* dark overlay for text readability */
 .project__media::after {
@@ -111,6 +106,18 @@
   top: 35%;
   right: 35%;
 }
+
+.coming-soon-placeholder {
+  position: relative;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px; 
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .project__card img {
     height: 200px;
