@@ -1,0 +1,16 @@
+/* ProjectDetail.css */
+
+.detail-image {
+    cursor: zoom-in;
+  }
+  
+  /* hvis du har overlays */
+  .project-image-item {
+    position: relative;
+  }
+  
+  .project-image-item::before,
+  .project-image-item::after {
+    pointer-events: none;
+  }
+  

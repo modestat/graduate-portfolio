@@ -3,7 +3,7 @@
   overflow: hidden;
   border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1);
 }
 .project__card:hover{
   transform: translateX(6px);
@@ -21,7 +21,7 @@
   height: 100%;
   background-color: #087321; 
   transform: scaleY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
   z-index: 3;
 }
 .project__card:hover::before {
@@ -38,7 +38,7 @@
   background-color: #087321;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
   z-index: 3;
 }
 .project__card:hover::after {
@@ -69,6 +69,15 @@
   margin-bottom: 10px;
   backdrop-filter: blur(-1px);
   border-radius: 4px;
+}
+
+.project__media {
+  position: relative;
+}
+
+.project__media::before,
+.project__media::after {
+  pointer-events: none;
 }
 
 
