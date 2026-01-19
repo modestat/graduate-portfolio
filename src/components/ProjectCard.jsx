@@ -22,24 +22,22 @@ import './styles/ProjectCard.css';
  *   The '_blank' parameter is a browser instruction meaning "open in new tab/window"
  */
 const ProjectCard = (props) => {
-  const viewCodeBtn = (e) => {
-    e.stopPropagation();
-    window.open(props.project.github, '_blank');
-  }
   return (
     // div + onclick to open slide-out panel
     <div className="project__card" onClick={() => props.onProjectClick(props.project)}> 
     {/*Shows whatever image is stored in props.project.mainImage in data.js
      - if image exists show it or else dispaly the cooming soon text*/}
-          {props.project.mainImage ? (
-            <img src={props.project.mainImage} alt={props.title} />
-          ) : (
-            <div className="coming-soon-placeholder">
-              <p>Coming Soon</p>
-            </div>
-          )}
+       <div className="project__media">
+            {props.project.mainImage ? (
+              <img src={props.project.mainImage} alt={props.title} />
+            ) : (
+              <div className="coming-soon-placeholder">
+                <p>Coming Soon</p>
+              </div>
+            )}
+          </div>
           <h2>{props.title}</h2>
-          <button onClick={viewCodeBtn}>{props.buttonText}</button>
+          {/*<button onClick={viewCodeBtn}>{props.buttonText}</button>*/}
     </div>
   )
 }

@@ -7,11 +7,11 @@ import './styles/project.css';
 const ProjectsPage = () => {
   const { 
     selectedProject,
-    imageNumber,      // Legg til denne
+    imageNumber,      
     openProject,
     closeProject,
-    nextImage,        // Legg til denne
-    prevImage         // Legg til denne
+    nextImage,        
+    prevImage         
   } = useProjectDetail();
 
   return (
@@ -24,7 +24,7 @@ const ProjectsPage = () => {
             title={project.title}
             description={project.description}
             date={project.date}
-            buttonText={project.buttonText}
+            // NOT IN USE ANYMORE: IT WAS FOR "VIEW CODE" buttonText={project.buttonText}
             project={project}
             onProjectClick={openProject}
           />

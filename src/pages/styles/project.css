@@ -1,3 +1,4 @@
+/*styles related for placement of the div project boxed in the container and the inside informaiton*/
 .projects-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -19,7 +20,7 @@
     right: 0;
     top: 0;
     width: 60%;
-    height: 100vh;
+    height: 88vh;
     background-color: rgb(252, 244, 244);
     padding: 3rem;
     box-shadow: -5px 0 15px rgba(180, 0, 0, 0.3);
@@ -72,7 +73,6 @@
   
   .github-link {
     display: inline-block;
-    color: #0066cc;
     text-decoration: none;
     margin: 1rem 0;
     font-weight: 500;
@@ -92,7 +92,7 @@
   .project-images--gallery {
     margin: 2rem 0;
     padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(28, 4, 4, 0.1);
   }
   
   .project-image-item {
@@ -111,20 +111,24 @@
     max-height: 500px;
     object-fit: contain;
     display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .project-image-item img:hover {
+    transform: scale(1.05);
   }
   
   .project-image-item .caption {
     padding: 15px;
     margin: 0;
-    color: #666;
+    color: #180c0c;
     font-size: 0.9rem;
-    background: white;
     line-height: 1.4;
   }
   
   .image-counter {
     text-align: center;
-    color: #666;
+    color: #120f0f;
     font-size: 0.9rem;
     margin-top: 0.5rem;
     padding: 0.5rem;
@@ -146,11 +150,11 @@
   }
   
   .carousel-buttons button:first-child {
-    left: -60px;
+    left: 0px;
   }
   
   .carousel-buttons button:last-child {
-    right: -60px;
+    right: 0px;
   }
   
   .carousel-buttons button:hover {
