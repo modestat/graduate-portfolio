@@ -1,5 +1,6 @@
 import ProjectCard from '../components/ProjectCard';
 import ProjectDetail from '../components/ProjectDetail'; 
+import ProjectsHeader from '../components/ProjectsHeader';
 import { projects } from '../data/projectsInfo';
 import { useProjectDetail } from '../hooks/useProjectDetail';
 import './styles/project.css';
@@ -16,6 +17,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="projects-container">
+       <ProjectsHeader onBack={() => navigate(-1)} /> 
       <div className="projects__display--box">
         {projects.map(project => (
           <ProjectCard 
