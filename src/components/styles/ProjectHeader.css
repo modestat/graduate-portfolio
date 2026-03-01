@@ -4,14 +4,12 @@
   left: 0;
   width: 28%;  
   height: 70px; 
-  z-index: 301;
 }
 
 .projects-header {
   position: absolute;
   top: 1rem;
   left: 2rem;
-  z-index: 302; /* over SVG */
   background: transparent;
 }
 
@@ -34,7 +32,6 @@
   font-size: 0.85rem;
   padding: 0;
   text-decoration: underline;
-  z-index: 302;
 }
 
 @media (max-width: 1100px) {
