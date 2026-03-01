@@ -195,12 +195,11 @@ export const projects = [
     {
       id: 4,
       slug: "upcoing",
-      title: "Upcoming",
-      longDescription: "A project that will be developed as part of course tingenes web, along with 3 interaction design students and 2 other developers from the same bachelor course",
-      date: "Fall 2025",
+      title: "AI tool for ADHD students",
+      longDescription: "Bachelor project in progress - stay tuned for updates!",
+      date: "Spring 2026",
       buttonText: "Coming Soon",
       mainImage: null, 
       comingSoon: true, 
-      comingSoonMessage: "Project starts Fall 2025"
     }
   ];
