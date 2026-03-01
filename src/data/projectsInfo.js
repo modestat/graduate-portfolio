@@ -94,7 +94,12 @@ export const projects = [
      ],
     technologies: "React, Node.js, Express, MongoDB, Docker, GitHub Actions",
     github: "https://github.com/sabria23/Idg2671-project",
-    longDescription: "A web application for creating and managing research surveys, built as a team project with 3 other students. This course focused on agile development practices and working with a product owner. I developed the dashboard page, data export functionality, and participant recruitment features, working across both frontend (React) and backend (Node.js/Express with MongoDB). I also handled deployment setup using GitHub Actions and Docker for the backend service. This project taught me full-stack development, REST API design, team collaboration, and DevOps basics.",
+    longDescription: "Research artifact comparison survey platform build end-to-end with a team of 4, following agile methodology with a product owner from NTNU. I worked full-stack across dashbaord, data export and participant recruitment pages, pluss part of deployment, CI/CD and testing.",
+    myRole: [
+      "Dashboard and data export features",
+      "Participant recruitment flow",
+      "Deployment, Github Actions and Express validation"
+    ]
   },
     {
       id: 2,
@@ -150,8 +155,8 @@ export const projects = [
     technologies: "Python, React, FastAPI, PostgreSQL, Docker, Nginx, Render",
     github: "https://github.com/viljaah/twitter-remake-2",
     overview: "A full-stack social media application built in two phases. Started with core features like posting, authentication, and user management. Later expanded with load balancing and caching to handle high traffic scenarios.",
-    myRole: "I built user authentication and account management (register, login, search). Implemented Nginx load balancer with least-connections algorithm. Created multi-layer caching (API cache + DB cache) with Python. Added follow/unfollow system with follower counts and deployed to Render with separate microservices for frontend/backend"
-    },
+    myRole: ["I built user authentication and account management (register, login, search). Implemented Nginx load balancer with least-connections algorithm. Created multi-layer caching (API cache + DB cache) with Python. Added follow/unfollow system with follower counts and deployed to Render with separate microservices for frontend/backend"
+    ]},
 
     {
       id: 3,

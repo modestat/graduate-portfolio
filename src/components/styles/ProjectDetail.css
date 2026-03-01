@@ -1,10 +1,3 @@
-/* ProjectDetail.css */
-
-.detail-image {
-    cursor: zoom-in;
-  }
-  
-  /* hvis du har overlays */
   .project-image-item {
     position: relative;
   }
@@ -14,6 +7,13 @@
     pointer-events: none;
   }
   
+  .project-long-description {
+    border-left: 5px solid #7d2e3a;
+    padding-left: 1rem;
+    line-height: 1.5;
+    color: #444;
+  }
+
   .project-detail--out {
     position: fixed;
     right: 0;
@@ -103,15 +103,12 @@
   .github-button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem; /* Redusert */
-    padding: 0.6rem 1.2rem; /* Mindre padding */
+    padding: 0.6rem 1.2rem; 
     background: #7d2e3a;
     color: white;
     text-decoration: none;
-    border-radius: 6px; /* Mindre rounding */
-    font-family: 'Inter', sans-serif;
-    font-weight: 500; /* Mindre bold */
-    font-size: 0.85rem; /* Mindre tekst */
+    border-radius: 6px;
+    font-size: 0.85rem; 
     letter-spacing: 0.03em;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(125, 46, 58, 0.2); /* Mindre shadow */
@@ -125,29 +122,19 @@
   }
   
   .github-button svg {
-    width: 16px; /* Mindre ikon */
+    width: 16px;
     height: 16px;
   }
-  
-  /* Description - more compact */
-  .project-description {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6; /* Redusert fra 1.7 */
-    color: #444;
-    font-size: 0.95rem; /* Litt mindre */
-    margin: 1rem 0; /* Mindre margin */
-  }
-  
-  /* Gallery - more compact */
+
   .project-gallery {
-    margin-top: 1.5rem; /* Redusert fra 2rem */
+    margin-top: 1.5rem; 
     margin-bottom: 2rem; /* Viktig: space for scrolling */
   }
   
   .gallery-container {
     position: relative;
     background: white;
-    border-radius: 8px; /* Mindre rounding */
+    border-radius: 8px; 
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   }
@@ -155,17 +142,17 @@
   .gallery-image {
     width: 100%;
     height: auto;
-    max-height: 350px; /* Redusert fra 450px */
+    max-height: 350px; 
     object-fit: contain;
     display: block;
   }
   
-  /* Carousel buttons - smaller */
+
   .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 38px; /* Redusert fra 44px */
+    width: 38px;
     height: 38px;
     background: rgba(255, 255, 255, 0.95);
     border: none;

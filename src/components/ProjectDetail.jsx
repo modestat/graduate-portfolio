@@ -37,19 +37,6 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
           View on GitHub
         </a>
 
-        {project.technologies && (
-          <p className="project-technologies">
-            <strong>Technologies:</strong> {project.technologies}
-          </p>
-        )}
-
-        
-        {project.longDescription && (
-          <p className="project-long-description">
-            {project.longDescription}
-          </p>
-        )}
-
         {project.images && project.images.length > 0 && (
            <div className="project-gallery">
            <div className="gallery-container">
@@ -59,7 +46,6 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
                className="gallery-image"
              />
              
-             {/* Modern carousel controls */}
              <button className="carousel-btn prev" onClick={onPrevImage}>
                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                  <polyline points="15 18 9 12 15 6"></polyline>
@@ -72,7 +58,6 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
                </svg>
              </button>
  
-             {/* Image counter */}
              <div className="image-counter">
                {imageNumber + 1} / {project.images.length}
              </div>
@@ -81,6 +66,31 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
            <p className="image-caption">{project.images[imageNumber].caption}</p>
          </div>
         )}
+        
+        {project.longDescription && (
+          <p className="project-long-description">
+            {project.longDescription}
+          </p>
+        )}
+        
+          {project.myRole && project.myRole.length > 0 && (
+              <>
+                <p className="project-section-label">My Role:</p>
+                <ul className="project-myRole">
+                  {/** hvis jeg skal displaye ting fra json som er srkevet i object array, hadde det vært srting så måtte den bli hentet på en anenn måte */}
+                  {project.myRole.map((role, i) => (
+                    <li key={i}>{role}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+        {project.technologies && (
+          <p className="project-technologies">
+            <strong>Technologies:</strong> {project.technologies}
+          </p>
+        )}
+
       </div>
 
       {isImageOpen && (
