@@ -190,7 +190,13 @@ export const projects = [
      ],
     technologies: "HTML, CSS",
     github: "https://github.com/modestat/assigment-4",
-    longDescription: ""
+    longDescription: "Accessible learning portal built with pure HTML and CSS, focused entirely on WCAG compliance. Fully navigable by keyboard and screen reader, with semantic markup throughout.",
+    myRole: [
+      "Skip-to-main-content implementation",
+      "Full keyboard navigation support",
+      "Screen reader accessible forms with error handling",
+      "Semantic HTML for table, images and navigation"
+    ]
     },
     {
       id: 4,
