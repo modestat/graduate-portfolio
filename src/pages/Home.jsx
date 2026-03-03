@@ -23,7 +23,7 @@ const LandingPage = () => {
   const handleDragEnd = () => {
     const distance = currentX - startX;
     if (distance > 50) {
-      navigate('/projects'); // Naviger til projects
+      navigate('/projects'); 
     }
     setIsDragging(false);
   }
@@ -32,7 +32,6 @@ const LandingPage = () => {
     <div className="landing-container">
       <section className="hero-section">
         <h1>Modesta Trakselyte</h1>
-        <p>Fullstack web developer</p>
         <p>Slide to the right to view my work or get to know me better through about page!</p>
       </section>
 
@@ -53,6 +52,10 @@ const LandingPage = () => {
           }}
         />
         <span className="slider-text right">Projects</span>
+      </div>
+      <div className='dev-section'>
+        <div className='dev-ghost'> DEV</div>
+        <div className='dev-stripe'></div>
       </div>
     </div>
   );

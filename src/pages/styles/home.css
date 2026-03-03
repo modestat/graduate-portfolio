@@ -25,7 +25,6 @@
   margin: 0.5rem 0;
 }
 
-/* Slider */
 .ipad-slider {
   width: min(600px, calc(100vw - 4rem));
   max-width: 600px;
@@ -71,4 +70,37 @@
 
 .slider-text.right {
   right: 60px;
+}
+
+.landing-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dev-section {
+  margin-top: auto;
+  background: #f5f2ee;
+  padding-top: 2.5rem;
+  overflow: hidden;
+}
+
+.dev-ghost {
+  font-size: clamp(4rem, 18vw, 12rem);
+  font-weight: 900;
+  color: rgba(125, 46, 58, 0.13);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-align: right;
+  margin-right: -0.05em; /* avskåret høyre kant */
+}
+
+.dev-stripe {
+  background: #7d2e3a;
+  height: 8px;
+  width: 100%;
 }
