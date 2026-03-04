@@ -17,7 +17,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="projects-container">
-       <ProjectsHeader onBack={() => navigate(-1)} /> 
+       <ProjectsHeader onBack={() => navigate('/')} /> 
       <div className="projects__display--box">
         {projects.map(project => (
           <ProjectCard 

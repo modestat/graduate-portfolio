@@ -17,7 +17,7 @@ const ProjectsHeader = () => {
         </h1>
       </div>
 
-      <button className="projects-header__back" onClick={() => navigate(-1)}>
+      <button className="projects-header__back" onClick={() => navigate('/')}>
           Back
         </button>
     </>

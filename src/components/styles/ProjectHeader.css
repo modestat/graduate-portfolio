@@ -32,6 +32,7 @@
   font-size: 0.85rem;
   padding: 0;
   text-decoration: underline;
+  z-index: 1000; /*SVG-en din øverst i komponenten har sikkert position: absolute og ligger fysisk oppå knappen og blokkerer klikket*/
 }
 
 @media (max-width: 1100px) {
