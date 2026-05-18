@@ -44,6 +44,8 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
                src={project.images[imageNumber].src} 
                alt={project.images[imageNumber].alt}
                className="gallery-image"
+               onClick={openImage}
+               style={{ cursor: 'pointer' }}
              />
              
              <button className="carousel-btn prev" onClick={onPrevImage} aria-label="Previous image">
