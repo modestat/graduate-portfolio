@@ -10,6 +10,7 @@
     left: 0;
     right: 0;
     z-index: var(--z-navbar);
+    pointer-events: none; /* navbar-elementet blokkerer ikke klikk */
   }
 
   /*sentrering parent ocntinaer for icons og links*/
@@ -24,6 +25,7 @@
     border: none;
     color: rgb(12, 12, 55);
     padding: 0.5rem;
+    pointer-events: auto; /* men hamburgeren skal fortsatt fungere */
   }
   
   .hamburger-btn:hover {

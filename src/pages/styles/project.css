@@ -18,9 +18,9 @@
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
-    z-index: 999;
+    z-index: var(--z-project-overlay);
   }
-  
+
   /* Mobile */
   @media (max-width: 768px) {
     .projects__display--box {
