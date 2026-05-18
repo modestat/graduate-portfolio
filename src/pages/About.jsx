@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <section className="about-page">
 
-      <h1 className="about-title">About me</h1>
+      <h1 className="about-title">About me.</h1>
        <div className="about-layout">
         <div className="about-text">
           <div className="about-block">

@@ -5,17 +5,18 @@
 
 .about-title {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-60%) rotate(-90deg);
-  transform-origin: left top;
-  font-size: 70px;
-  color: #660033;
+  top: 83%;
+  left: 2.3rem;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  font-size: clamp(4rem, 16vw, 7rem); /* større */
+  color: var(--color-primary-dark);
   letter-spacing: 2px;
   white-space: nowrap;
-  background-color: yellow;
+  background: transparent; /* ingen gul bakgrunn */
+  z-index: 0;
+  pointer-events: none;
 }
-
 
 .about-layout {
   max-width: 1100px;
@@ -24,6 +25,8 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 4rem;
   align-items: start;
+  position: relative;
+  z-index: 1;
 }
 
 .about-text {
@@ -31,48 +34,44 @@
 }
 
 .about-block {
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-xl);
 }
 
 .about-block h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
   position: relative;
 }
 
 .about-block h3::after {
-  content: "";
+  content: '';
   display: block;
   width: 40px;
   height: 2px;
-  background:rgb(213, 213, 3);
+  background: var(--color-accent);
   margin-top: 6px;
 }
 
-.about-block p {
+.about-block p,
+.about-bio {
   line-height: 1.8;
   font-size: 1rem;
+  color: var(--color-text);
 }
-
 
 .about-image img {
   width: 100%;
   max-width: 360px;
-  border-radius: 20px;   
+  border-radius: var(--radius-lg);
   object-fit: cover;
 }
 
 @media (max-width: 900px) {
   .about-title {
-    position: static;
-    transform: none;
-    font-size: 40px;
-    text-align: center;
-    background-color: transparent;
+    display: none;
   }
 
   .about-page {
-    padding: 4rem 2rem;
+    padding: 4rem var(--space-lg);
   }
- 
 }
