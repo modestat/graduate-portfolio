@@ -6,7 +6,7 @@ const ProjectsHeader = () => {
   return (
     <>
       {/* SVG uavhengig av header-div, dekker hele toppen */}
-      <svg className="projects-header__svg" viewBox="0 0 400 60" preserveAspectRatio="none">
+      <svg className="projects-header__svg" aria-hidden="true" viewBox="0 0 400 60" preserveAspectRatio="none">
         <line x1="0" y1="58" x2="320" y2="58" stroke="#8B1A1A" strokeWidth="2"/>
         <line x1="320" y1="58" x2="400" y2="0" stroke="#8B1A1A" strokeWidth="2"/>
       </svg>
