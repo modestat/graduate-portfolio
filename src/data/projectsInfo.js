@@ -29,6 +29,19 @@ import tutorialPage2 from "../assets/projects/accessibility/tutorialPage2.png";
 import form3 from "../assets/projects/accessibility/form3.png";
 /********************************************* */
 
+// images for adhd-tool project
+import loginADHD from "../assets/projects/adhd-tool/login.png";
+import calender from "../assets/projects/adhd-tool/calender.png";
+import category from "../assets/projects/adhd-tool/category-modal.png";
+import chatDekstop from "../assets/projects/adhd-tool/chatDekstop.png";
+import chatMobile from "../assets/projects/adhd-tool/chatMobil.png";
+import colorPalette from "../assets/projects/adhd-tool/colorPalette.png";
+import focus from "../assets/projects/adhd-tool/focus.png";
+import overdue from "../assets/projects/adhd-tool/overdue.png";
+import overview from "../assets/projects/adhd-tool/overview.png";
+import taskModal from "../assets/projects/adhd-tool/task-modal.png";
+/********************************************* */
+
 export const projects = [
   {
     id: 1,
@@ -200,12 +213,76 @@ export const projects = [
     },
     {
       id: 4,
-      slug: "upcoing",
-      title: "AI tool for ADHD students",
-      longDescription: "Bachelor project in progress - stay tuned for updates!",
+      slug: "Currents",
+      title: "Currents",
+      description: "",
       date: "Spring 2026",
-      buttonText: "Coming Soon",
-      mainImage: null, 
-      comingSoon: true, 
-    }
+      buttonText: "",
+      mainImage: focus,
+      images: [
+       {
+        src: loginADHD,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: focus,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: overview,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: category,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: calender,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: taskModal,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: chatDekstop,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: chatMobile,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: overdue,
+        alt: "",
+        caption: ""
+       },
+       {
+        src: colorPalette,
+        alt: "",
+        caption: ""
+       },
+     ],
+    technologies: "PostresSQL, Node.js, Express, React, Antropic API",
+    longDescription: "Accessible learning portal built with pure HTML and CSS, focused entirely on WCAG compliance. Fully navigable by keyboard and screen reader, with semantic markup throughout.",
+    myRole: [
+      "User authentication with JWT",
+      "Integration with Antropic API for AI-powered task breakdwon list suggestions",
+      "Development of chat interface"
+    ]
+   }
   ];
+
+
+
+
+
+

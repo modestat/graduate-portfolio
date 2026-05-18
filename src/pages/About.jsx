@@ -6,37 +6,17 @@ const AboutPage = () => {
     <section className="about-page">
 
       <h1 className="about-title">About me</h1>
-
-      <div className="about-layout">
-
+       <div className="about-layout">
         <div className="about-text">
-
           <div className="about-block">
-            <h3>Background</h3>
+            <h3>Modesta Trakselyte</h3>
             <p>
-              I'm in my final year of Web Development studies at NTNU Gjøvik,
-              specializing in JavaScript across both frontend (React) and backend (Node.js, Express).
+            I'm a fullstack web developer finishing my degree at NTNU Gjøvik. I've built everything from scalable APIs to accessibility-focused front ends, 
+            usually under time pressure and while figuring things out along the way. 
+            My favourite project so far involved diving into psychology research papers and ADHD literature before writing a single line of code. 
+            Turns out understanding people is half the job.
             </p>
           </div>
-
-          <div className="about-block">
-            <h3>Experience</h3>
-            <p>
-              As project leader for StudyPlatform, I coordinated a team of four
-              while contributing across the full stack, including API design
-              and cloud deployment.
-            </p>
-          </div>
-
-          <div className="about-block">
-            <h3>How I Work</h3>
-            <p>
-              I approach technical challenges methodically — breaking problems
-              into manageable parts, consulting documentation, and collaborating
-              when needed.
-            </p>
-          </div>
-
         </div>
 
         <div className="about-image">

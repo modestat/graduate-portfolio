@@ -1,10 +1,14 @@
 - design 404 page
 - have hooks (split of logics from home.jsx it is too overwelming - bad practice)
-- go through WSG - for better image and laoding perfomance (add lazy loading) (like optimize the images etc)
-- do lighthouse tetsing and see how can website be improved better (performance)
-- clean in css (have var vairbales)
 - better comments
-- also write a documention on where is what
-- CLEAN UP IN DESIGN SYSTEM!!! (fonts, accesibiltiy, layout, colors)
-- GO THROUG PROJECTDETAIL.CSS IT IS A MESS HELPPP
+- fiks back button i meny
+- legg til beskrivelse av bildene for adhd tool
+- legg til ekta emial link
+
+
+
+styling: 
+- bedre about me
+- få med fullstack dveleoper tydelig
+- bryt ned representajson av tekst 
 

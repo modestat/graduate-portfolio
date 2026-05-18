@@ -34,13 +34,16 @@ const ProjectsPage = () => {
       </div>
 
       {selectedProject && (
-        <ProjectDetail 
-          project={selectedProject}
-          imageNumber={imageNumber}      // Send imageNumber
-          onClose={closeProject}
-          onNextImage={nextImage}        // Send nextImage funksjon
-          onPrevImage={prevImage}        // Send prevImage funksjon
-        />
+         <>
+         <div className="project-overlay" onClick={closeProject} />
+         <ProjectDetail 
+           project={selectedProject}
+           imageNumber={imageNumber}
+           onClose={closeProject}
+           onNextImage={nextImage}
+           onPrevImage={prevImage}
+         />
+       </>
       )}
     </div>
   );

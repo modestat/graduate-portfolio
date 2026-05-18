@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 300; /*TODO: FIX IN THESE OVARLL HUGE VALUES THROUGH CSS*/
+    z-index: var(--z-navbar);
   }
 
   /*sentrering parent ocntinaer for icons og links*/
@@ -42,7 +42,7 @@
     bottom: 0;
     background-color: rgba(16, 26, 47, 0.85);  /*last number is for the opacity of the bckg*/
     backdrop-filter: blur(6px) saturate(150%); /* Blur + mørkere */
-    z-index: 200;
+    z-index: var(--z-fullscreen-menu);
     /* for å sentere innholde av navlinks*/
     display: flex;
     justify-content: center;

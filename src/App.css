@@ -2,15 +2,61 @@
 typically applies in react -> app wide layout rules (like grid, wrapper, background)
 */
 
+:root {
+  --color-primary:       #7d2e3a;
+  --color-primary-dark:  #660033;
+  --color-primary-hover: #9d3e4a;
+  --color-accent:        #F5D000;
+  --color-green:         #087321;
+
+  --color-dark:          #1a1a1a;
+  --color-text:          #2a2a2a;
+  --color-text-muted:    #666;
+  --color-text-subtle:   #444;
+
+  --color-bg:            #ffffff;
+  --color-bg-warm:       #faf9f7;
+  --color-bg-warm-2:     #f5f3f0;
+  --color-bg-light:      #f5f2ee;
+
+  --font-body:    'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  --z-back-btn:        100;
+  --z-navbar:          300;
+  --z-fullscreen-menu: 350;
+  --z-project-overlay: 400;
+  --z-project-detail:  410;
+  --z-close-btn:       420;
+  --z-image-modal:     500;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   20px;
+  --radius-full: 50%;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
-  line-height: 1.6;
-  color: #333;
   font-size: 18px;
   line-height: 1.75;
-  color: #2a2a2a; /* Soft black, ikke harsh */
+  color: var(--color-text);
 }
 
 h1 {
@@ -21,25 +67,17 @@ h1 {
 h2, h3 {
   letter-spacing: 2px;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-weight: 400;
 }
 
-html, body, #root{
-    height:100%;
-}
-
 #root {
-    display: flex;
-    flex-direction: column;
-}
-
-.outer__parent--box {
-    flex: 1;
-    background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
 }
 
 body.no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
