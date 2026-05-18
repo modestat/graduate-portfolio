@@ -26,9 +26,8 @@ const Footer = () => {
               La oss lage noe sammen.
             </h2>
             <div className="footer-links">
-              <button className={`footer-email-btn ${hov ? 'footer-email-btn--light' : ''} `} >
-                trakselytemodesta@gmail.com
-              </button>
+              <a href="mailto:trakselytemodesta@gmail.com" aria-label="Email" className={`footer-email-btn ${hov ? 'footer-email-btn--light' : ''} `} >trakselytemodesta@gmail.com</a>
+
               <a
                 href="https://www.linkedin.com/in/modesta-traksleyte-a462402b0/"
                 target="_blank"
