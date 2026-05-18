@@ -237,3 +237,38 @@
     display: block;
     height: var(--space-lg); /* Spacer at bottom */
   }
+
+  .project-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #ddd;
+    margin: var(--space-md) 0 var(--space-sm);
+  }
+  
+  .project-tab {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    transition: all var(--transition-base);
+    margin-bottom: -1px;
+  }
+  
+  .project-tab--active {
+    color: var(--color-dark);
+    border-bottom-color: var(--color-primary);
+  }
+  
+  .project-tab-content {
+    padding: var(--space-xs) 0;
+  }
+
+  .project-tab-content p,
+.project-tab-content ul {
+  margin-top: 0;
+}

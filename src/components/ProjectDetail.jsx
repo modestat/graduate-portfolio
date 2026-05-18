@@ -2,7 +2,14 @@ import {useState} from 'react';
 import ImageModal from './ImageModal';
 import './styles/ProjectDetail.css';
 const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage  }) => {
+  const [activeTab, setActiveTab] = useState('overview');
   const [isImageOpen, setIsImageOpen] = useState(false);
+
+  const tabs = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'role', label: 'My Role' },
+    { id: 'stack', label: 'Stack' },
+  ];
 
   const openImage = (e) => {
     e.stopPropagation();    
@@ -68,31 +75,38 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
            <p className="image-caption">{project.images[imageNumber].caption}</p>
          </div>
         )}
-        
-        {project.longDescription && (
-          <p className="project-long-description">
-            {project.longDescription}
-          </p>
-        )}
-        
-          {project.myRole && project.myRole.length > 0 && (
-              <>
-                <p className="project-section-label">My Role:</p>
-                <ul className="project-myRole">
-                  {/** hvis jeg skal displaye ting fra json som er srkevet i object array, hadde det vært srting så måtte den bli hentet på en anenn måte */}
-                  {project.myRole.map((role, i) => (
-                    <li key={i}>{role}</li>
-                  ))}
-                </ul>
-              </>
-            )}
+        {/* Tabs */}
+      <div className="project-tabs">
+        {tabs.map(tab => (
+          <button
+            key={tab.id}
+            className={`project-tab ${activeTab === tab.id ? 'project-tab--active' : ''}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
 
-        {project.technologies && (
+      <div className="project-tab-content">
+      {activeTab === 'overview' && (
+        <p className="project-long-description">{project.longDescription}</p>
+      )}
+
+        {activeTab === 'role' && project.myRole && project.myRole.length > 0 && (
+          <ul className="project-myRole">
+            {project.myRole.map((role, i) => (
+              <li key={i}>{role}</li>
+            ))}
+          </ul>
+        )}
+
+        {activeTab === 'stack' && project.technologies && (
           <p className="project-technologies">
             <strong>Technologies:</strong> {project.technologies}
           </p>
         )}
-
+      </div>
       </div>
 
       {isImageOpen && (
@@ -107,3 +121,4 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
 };
 
 export default ProjectDetail;
+
