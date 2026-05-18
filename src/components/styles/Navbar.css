@@ -26,6 +26,7 @@
     color: rgb(12, 12, 55);
     padding: 0.5rem;
     pointer-events: auto; /* men hamburgeren skal fortsatt fungere */
+    cursor: pointer;
   }
   
   .hamburger-btn:hover {

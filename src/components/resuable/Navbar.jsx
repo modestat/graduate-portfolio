@@ -11,7 +11,8 @@ const Navbar = () => {
         <button 
           className="hamburger-btn" 
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu" //ACCESSIBILITY
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? (
             // X ikon

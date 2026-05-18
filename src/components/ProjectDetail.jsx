@@ -16,7 +16,7 @@ const ProjectDetail = ({ project, imageNumber, onClose, onNextImage, onPrevImage
   return (
     <>
       <div className="project-detail--out">
-        <button className="close-project-detail" onClick={onClose}>
+        <button className="close-project-detail" onClick={onClose} aria-label="Close project">
           X
         </button>
 
