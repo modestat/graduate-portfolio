@@ -215,70 +215,70 @@ export const projects = [
       id: 4,
       slug: "Currents",
       title: "Currents",
-      description: "",
+      description: "An AI-powered task management tool designed for university students with ADHD.",
       date: "Spring 2026",
       buttonText: "",
       mainImage: focus,
       images: [
-       {
-        src: loginADHD,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: focus,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: overview,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: category,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: calender,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: taskModal,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: chatDekstop,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: chatMobile,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: overdue,
-        alt: "",
-        caption: ""
-       },
-       {
-        src: colorPalette,
-        alt: "",
-        caption: ""
-       },
-     ],
-    technologies: "PostresSQL, Node.js, Express, React, Antropic API",
-    longDescription: "Accessible learning portal built with pure HTML and CSS, focused entirely on WCAG compliance. Fully navigable by keyboard and screen reader, with semantic markup throughout.",
-    myRole: [
-      "User authentication with JWT",
-      "Integration with Antropic API for AI-powered task breakdwon list suggestions",
-      "Development of chat interface"
-    ]
-   }
+        {
+          src: loginADHD,
+          alt: "Login page for Currents application",
+          caption: "Login page"
+        },
+        {
+          src: focus,
+          alt: "Focus page showing the most recently worked on task and next upcoming task",
+          caption: "Focus page — reduces cognitive effort by surfacing only what is immediately relevant"
+        },
+        {
+          src: overview,
+          alt: "Overview page displaying all active tasks as cards with title, step progress, due date and priority",
+          caption: "Overview page — the primary workspace for managing tasks"
+        },
+        {
+          src: category,
+          alt: "Category management panel where users can create, edit and delete categories with custom name and color",
+          caption: "Category management panel"
+        },
+        {
+          src: calender,
+          alt: "Calendar page showing a monthly overview of tasks organized by due date",
+          caption: "Calendar page — tasks organized by due date with a day panel on click"
+        },
+        {
+          src: taskModal,
+          alt: "Add task modal with fields for title, description, category, due date and priority",
+          caption: "Add task modal — option to break down the task with AI before saving"
+        },
+        {
+          src: chatDekstop,
+          alt: "Chat page on desktop showing task details on the left, AI conversation in the middle, and chat history on the right",
+          caption: "Chat workspace — AI asks clarifying questions before suggesting step breakdowns"
+        },
+        {
+          src: chatMobile,
+          alt: "Chat page on mobile showing the AI conversation interface",
+          caption: "Chat workspace on mobile"
+        },
+        {
+          src: overdue,
+          alt: "Overdue page listing tasks past their due date with options to complete, reschedule or delete",
+          caption: "Overdue page — tasks can be completed, rescheduled or deleted"
+        },
+        {
+          src: colorPalette,
+          alt: "Color palette used in the Currents application design",
+          caption: "Design — color palette"
+        },
+      ],
+      technologies: "PostgreSQL, Node.js, Express, React, Anthropic API",
+      longDescription: "Currents is an AI-powered task management tool built for university students with ADHD. The project involved extensive user research through co-design workshops and psychology literature before development began. The AI integration allows users to break tasks into manageable steps through a conversational interface, reducing the cognitive load of getting started.",
+      myRole: [
+        "User authentication with JWT",
+        "Integration with Anthropic API for AI-powered task breakdown suggestions",
+        "Development of the chat interface including session management and real-time conversation",
+      ]
+    }
   ];
 
 
