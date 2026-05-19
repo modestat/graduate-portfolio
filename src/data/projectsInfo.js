@@ -167,8 +167,13 @@ export const projects = [
      ],
     technologies: "Python, React, FastAPI, PostgreSQL, Docker, Nginx, Render",
     github: "https://github.com/viljaah/twitter-remake-2",
-    overview: "A full-stack social media application built in two phases. Started with core features like posting, authentication, and user management. Later expanded with load balancing and caching to handle high traffic scenarios.",
-    myRole: ["I built user authentication and account management (register, login, search). Implemented Nginx load balancer with least-connections algorithm. Created multi-layer caching (API cache + DB cache) with Python. Added follow/unfollow system with follower counts and deployed to Render with separate microservices for frontend/backend"
+    longDescription: "A Twitter-inspired platform built with a three-tier architecture: a React frontend, a FastAPI REST backend, and a PostgreSQL relational database. Core features include posting, editing and deleting tweets, search across tweets, hashtags and users, account creation, and likes. To handle performance and scaling, we implemented load balancing with caching between the web server and API, a DB cache between the API and database, and a like-batcher that collects likes and sends them in bulk to the database. API calls are logged and accessible via a dedicated endpoint. The entire system is dockerized and deployed on Render.",
+    myRole: [
+      "Built user authentication and account management (register, login, profile settings)",
+      "Implemented Nginx load balancer with least-connections algorithm",
+      "Created multi-layer caching: API cache between web server and API, DB cache between API and database",
+      "Added follow/unfollow system with follower counts",
+      "Dockerized the full system and partly deployed frontend and backend as separate services on Render",
     ]},
 
     {
