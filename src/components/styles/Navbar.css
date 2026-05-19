@@ -2,7 +2,6 @@
     position: fixed;
     background-color: transparent; 
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 2rem;
     box-shadow: none;
@@ -12,6 +11,8 @@
     z-index: var(--z-navbar);
     pointer-events: none; /* navbar-elementet blokkerer ikke klikk */
   }
+
+  .navbar { justify-content: flex-end;}
 
   /*sentrering parent ocntinaer for icons og links*/
   .menu-content {

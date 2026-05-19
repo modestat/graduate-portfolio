@@ -30,35 +30,43 @@ const LandingPage = () => {
 
   return (
     <div className="landing-container">
-      <section className="hero-section">
-        <h1>Modesta Trakselyte</h1>
-        <p>Slide to the right to view my work or get to know me better through about page!</p>
-      </section>
-
-      <div className='ipad-slider'
-        onMouseDown={handleDragStart}
-        onMouseMove={handleDragMove}
-        onMouseUp={handleDragEnd}
-        onMouseLeave={handleDragEnd}
-        onTouchStart={handleDragStart}
-        onTouchMove={handleDragMove}
-        onTouchEnd={handleDragEnd}
-      >
-        <div className="inside__slider-circle"
-          style={{ 
-            transform: isDragging 
-              ? `translateX(${Math.min(Math.max(currentX - startX, 0), 200)}px)` 
-              : undefined
-          }}
-        />
-        <span className="slider-text right">Projects</span>
+ 
+      {/* Vertikal bleed tekst — kun desktop */}
+      <div className="bleed-text" aria-hidden="true">MODESTA</div>
+ 
+      <div className="hero-content">
+        <p className="hero-greeting">hello, my name is</p>
+ 
+        <h1 className="hero-name">
+          <span className="hero-name--first">Modesta</span>
+          <span className="hero-name--last">Trakselyte</span>
+        </h1>
+ 
+        <div className="hero-underline" />
+ 
+        <p className="hero-sub">Fullstack Developer</p>
+ 
+        <div className='ipad-slider'
+          onMouseDown={handleDragStart}
+          onMouseMove={handleDragMove}
+          onMouseUp={handleDragEnd}
+          onMouseLeave={handleDragEnd}
+          onTouchStart={handleDragStart}
+          onTouchMove={handleDragMove}
+          onTouchEnd={handleDragEnd}
+        >
+          <div className="inside__slider-circle"
+            style={{
+              transform: isDragging
+                ? `translateX(${Math.min(Math.max(currentX - startX, 0), 280)}px)`
+                : undefined
+            }}
+          />
+          <span className="slider-text right">Enter Portfolio </span>
+        </div>
       </div>
-      <div className='dev-section'>
-        <div className='dev-ghost'> DEV</div>
-        <div className='dev-stripe'></div>
-      </div>
+ 
     </div>
   );
 }
-
 export default LandingPage;

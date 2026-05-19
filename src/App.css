@@ -47,7 +47,6 @@ typically applies in react -> app wide layout rules (like grid, wrapper, backgro
 }
 
 html, body, #root {
-  height: 100%;
   margin: 0;
 }
 
