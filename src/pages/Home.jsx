@@ -35,7 +35,7 @@ const LandingPage = () => {
       <div className="bleed-text" aria-hidden="true">MODESTA</div>
  
       <div className="hero-content">
-        <p className="hero-greeting">hello, my name is</p>
+        <h2 className="hero-greeting">hello, my name is</h2>
  
         <h1 className="hero-name">
           <span className="hero-name--first">Modesta</span>
