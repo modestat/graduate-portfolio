@@ -278,6 +278,7 @@ export const projects = [
       ],
       technologies: "PostgreSQL, Node.js, Express, React, Anthropic API",
       longDescription: "Currents is an AI-powered task management tool built for university students with ADHD. The project involved extensive user research through co-design workshops and psychology literature before development began. The AI integration allows users to break tasks into manageable steps through a conversational interface, reducing the cognitive load of getting started.",
+      github: "https://github.com/viljaah/bachelor-project",
       myRole: [
         "User authentication with JWT",
         "Integration with Anthropic API for AI-powered task breakdown suggestions",
