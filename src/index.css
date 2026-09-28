@@ -1,8 +1,22 @@
-/*
-typically in reacl it applies to global styles (things that apply everywhere, e.g. body, html, fonts, resets)
-*/
+:root {
+    /* Spacing */
+    --page-x: 4vw;                          /* space on the left and right */
+    --section-y: clamp(48px, 6vw, 88px);    /* space above and below each section */
+    --gap-lg: clamp(28px, 3vw, 44px);       /* between big blocks */
+    --gap-md: 20px;                         /* between smaller elements */
+    --gap-sm: 10px;                         /* tight spacing, like under labels */
+  
+    /* Text */
+    --text-label: 12px;                     /* small mono labels */
+    --text-body: 16px;                      /* normal text */
+    --text-lead: clamp(17px, 1.4vw, 20px);  /* slightly bigger intro text */
 
-html, body {
-    margin: 0;
-}
+    --font-display: 'Archivo', sans-serif;
+    --font-body: 'Geist', sans-serif;
+    --font-mono: 'Geist Mono', monospace;
+  }
 
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }

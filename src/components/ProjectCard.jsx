@@ -1,45 +1,20 @@
-import './styles/ProjectCard.css';
-/**
- * ProjectCard Component
- * 
- * Displays a clickable card for each project with an image, title, and button.
- * 
- * Props (data passed from parent HomePage component):
- * - props.project: The complete project object from projectsInfo.js containing all project data
- * - props.project.mainImage: The imported image file for the project thumbnail
- * - props.project.github: The GitHub repository URL -> comes from the project data in projectInfo.js
- * - props.title: The project's name/title
- * - props.buttonText: Text displayed on the button (usually "View Code")
- * - props.onProjectClick: Function from parent that opens the project detail panel
- * 
- * Clicking the card opens the project detail panel.
- * Clicking the button opens the GitHub repo in a new tab without triggering the card click.
- * 
- * Event Handling:
- * - e.stopPropagation(): Prevents the button click from "bubbling up" to the parent card div,
- *   which would otherwise trigger both the button's onClick AND the card's onClick
- * - window.open(url, '_blank'): Opens a URL in a new browser tab
- *   The '_blank' parameter is a browser instruction meaning "open in new tab/window"
- */
-const ProjectCard = (props) => {
+const ProjectCard = ({ project, onProjectClick }) => {
   return (
-    // div + onclick to open slide-out panel
-    <div className="project__card" onClick={() => props.onProjectClick(props.project)}> 
-    {/*Shows whatever image is stored in props.project.mainImage in data.js
-     - if image exists show it or else dispaly the cooming soon text*/}
-       <div className="project__media">
-            {props.project.mainImage ? (
-              <img src={props.project.mainImage} alt={props.title} />
-            ) : (
-              <div className="coming-soon-placeholder">
-                <p>Coming Soon</p>
-              </div>
-            )}
-          </div>
-          <h2>{props.title}</h2>
-          {/*<button onClick={viewCodeBtn}>{props.buttonText}</button>*/}
-    </div>
-  )
-}
+    <button className="project-card" onClick={() => onProjectClick(project)}>
+      <div className="project-card__image">
+        <img src={project.image} alt={`Screenshot of ${project.title}`} />
+      </div>
+      <div
+        className="project-card__bar"
+        style={{ backgroundColor: project.color || '#e0314b' }}
+      />
+      <div className="project-card__heading">
+        <h3 className="project-card__title">{project.title}</h3>
+        <span className="project-card__year">{project.date}</span>
+      </div>
+      <p className="project-card__description">{project.description}</p>
+    </button>
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

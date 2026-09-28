@@ -48,9 +48,13 @@ export const projects = [
     slug: "studyplatform",
     title: "StudyPlatform",
     description: "A platform for researchers to help create and conduct studies",
-    date: "Spring 2025",
+    when: "Spring 2025",
     buttonText: "View Code",
+    image: dashboard,   // placeholder path
+    color: '#e0314b',                          // bar color under the image
+    categories: ['Fullstack'],
     mainImage: dashboard,
+    type: 'Research platform, team of 4',
     
      // All images for the gallery
      images: [
@@ -121,7 +125,8 @@ export const projects = [
       description: "Twitter remake paltform with scalable backend architecture",
       date: "Spring 2025",
       buttonText: "View code",
-      mainImage: login,
+      categories: ['Fullstack'],
+      image: login,
     
      images: [
        {
@@ -183,7 +188,8 @@ export const projects = [
       description: "",
       date: "Fall 2024",
       buttonText: "View code",
-      mainImage: landingPage,
+      image: landingPage,
+      categories: ['WCAG'],
      images: [
        {
         src: landingPage,
@@ -223,7 +229,8 @@ export const projects = [
       description: "An AI-powered task management tool designed for university students with ADHD.",
       date: "Spring 2026",
       buttonText: "",
-      mainImage: focus,
+      image: focus,
+      categories: ['Fullstack', 'UI / UX', 'AI'],
       images: [
         {
           src: loginADHD,

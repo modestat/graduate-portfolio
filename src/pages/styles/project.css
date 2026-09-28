@@ -1,43 +1,146 @@
-/*styles related for placement of the div project boxed in the container and the inside informaiton*/
 .projects-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    padding-top: 100px; 
-  }
-  
-  .projects__display--box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 900px;
-    margin: 2rem auto;
-  }
+  background-color: #faf8f5;
+  padding: var(--section-y) var(--page-x);
+  color: #2a0d12;
+}
 
-  .project-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: var(--z-project-overlay);
-  }
+.projects__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-lg);
+}
 
-  /* Mobile */
-  @media (max-width: 768px) {
-    .projects__display--box {
-      grid-template-columns: 1fr;
-      padding: 0 1rem;
-    }
-  
-    .project-detail--out {
-      width: 79%;
-      height: 100vh;
-    }
-  
-    .carousel-buttons button:first-child {
-      left: 10px;
-    }
-  
-    .carousel-buttons button:last-child {
-      right: 10px;
-    }
-  }
+.projects__title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 112%;
+  font-size: clamp(48px, 7vw, 110px);
+  text-transform: uppercase;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--gap-md);
+}
+
+
+.projects__subtitle {
+  font-family: 'Archivo', sans-serif;
+  font-size: var(--text-body);
+  margin: 0;
+}
+
+/* Filter buttons */
+.projects__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-btn {
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  padding: 8px 14px;
+  background: transparent;
+  color: #2a0d12;
+  border: 1.5px solid #2a0d12;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn--active {
+  background-color: #2a0d12;
+  color: #faf8f5;
+}
+
+.filter-btn__count {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+/* Grid */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-lg) var(--gap-md);
+  align-items: start; /* all cards start at the same top line */
+}
+
+@media (max-width: 1100px) {
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .projects__grid { grid-template-columns: 1fr; }
+}
+
+/* Card */
+.project-card {
+  all: unset;
+  display: block;
+  cursor: pointer;
+}
+
+.project-card__image {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  filter: brightness(0.75);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.project-card:hover .project-card__image img,
+.project-card:focus-visible .project-card__image img {
+  filter: brightness(1);
+  transform: scale(1.03);
+}
+
+.project-card:focus-visible {
+  outline: 3px solid #2a0d12;
+  outline-offset: 4px;
+}
+
+.project-card__bar {
+  height: 8px;
+}
+
+.project-card__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 108%;
+  font-size: clamp(20px, 1.8vw, 28px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.project-card__year {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  white-space: nowrap; /* "Spring 2025" stays on one line */
+}
+
+.project-card__description {
+  font-family: 'Archivo', sans-serif;
+  font-size: var(--text-body);
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
