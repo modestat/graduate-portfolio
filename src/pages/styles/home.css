@@ -46,12 +46,27 @@
   letter-spacing: -0.035em;
   margin: 0;
 
+  --tile-height: 50vw;  /* height of one repeat of the image */
   background-image: url('../../assets/export/background/photo-wall-desktop.png');
-  background-size: cover;
-  background-position: center;
+  background-size: auto var(--tile-height);
+  background-repeat: repeat;
+  background-position: 0 0;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  animation: image-rise 29s linear infinite;
+}
+
+@keyframes image-rise {
+  from { background-position: 0 0; }
+  to   { background-position: 0 calc(-1 * var(--tile-height)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-name {
+    animation: none;
+  }
 }
 
 .hero-name--first,
@@ -69,3 +84,4 @@
   max-width: 700px;
   margin: var(--gap-lg) 0 0;
 }
+

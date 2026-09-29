@@ -5,8 +5,12 @@
   background-size: cover;
   background-position: center;
   color: #faf8f5;
-  padding: var(--section-y) var(--page-x);
+  min-height: 67svh;          /* at least one full screen tall */
+  display: flex;
+  align-items: center;         /* centers the text vertically */
+  padding: calc(var(--section-y) * 1.5) var(--page-x);
 }
+
 
 .about-inner p,
 .about-inner h2 {

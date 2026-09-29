@@ -10,9 +10,9 @@ const Footer = () => {
     try {
       await navigator.clipboard.writeText(EMAIL);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // back to "Copy" after 2 seconds
+      setTimeout(() => setCopied(false), 2000); 
     } catch {
-      window.location.href = `mailto:${EMAIL}`; // fallback if copying is blocked
+      window.location.href = `mailto:${EMAIL}`; 
     }
   };
 
@@ -35,9 +35,9 @@ const Footer = () => {
       </div>
 
       <nav className="footer__links" aria-label="Social links">
-        <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/modestat" target="_blank" rel="noopener noreferrer">GitHub</a>
         
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/modesta-trakselyte-a462402b0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </nav>
     </footer>
   );
