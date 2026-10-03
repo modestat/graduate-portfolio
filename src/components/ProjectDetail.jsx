@@ -38,8 +38,8 @@ const ProjectDetail = ({
         ref={detailRef}
         className="project-detail"
         style={{
-          '--accent': project.color || '#ffc94d',
-          '--ink': project.textColor || '#1a1012',
+          '--accent': '#d9d3ca', /* greige background */
+          '--ink': '#141a33',    /* midnight text */
         }}
       >
         {/* Top bar */}

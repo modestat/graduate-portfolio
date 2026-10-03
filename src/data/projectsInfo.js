@@ -127,7 +127,8 @@ export const projects = [
       buttonText: "View code",
       categories: ['Fullstack'],
       image: login,
-    
+      type: 'team of 2',
+      
      images: [
        {
          src: signup,
@@ -180,6 +181,7 @@ export const projects = [
       "Added follow/unfollow system with follower counts",
       "Dockerized the full system and partly deployed frontend and backend as separate services on Render",
     ]},
+    
 
     {
       id: 3,
@@ -190,6 +192,7 @@ export const projects = [
       buttonText: "View code",
       image: landingPage,
       categories: ['WCAG'],
+      type: 'Solo project',
      images: [
        {
         src: landingPage,
@@ -231,6 +234,7 @@ export const projects = [
       buttonText: "",
       image: focus,
       categories: ['Fullstack', 'UI / UX', 'AI'],
+      type: 'Bachelor project, won Eurekaprisen 2026 Gjøvik, team of 2',
       images: [
         {
           src: loginADHD,
