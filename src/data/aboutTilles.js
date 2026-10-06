@@ -77,9 +77,9 @@ export const aboutTiles = [
     type: 'text',
     title: 'Collecting words',
     category: 'outside',
-    body: "Three languages, and I'm still hunting for the right word in all of them. When a book or a show hands me a great one, I write it down. Few things are as attractive as saying an odd thought in a beautifully put way.",
+    body: "I like educating my mind. Since I'm multilingual, I feel I'm not good at any of my three languages: English, Norwegian and Lithuanian. So I always try to get better at expressing myself. I think if there is one thing a person could be better at, that is also so attractive, it's having a good vocabulary. Being able to put the hardest-to-name ideas and feelings into words that are a little bizarre, a little witty, and just so well put. That's extraordinary to me. So when I find a word in a book or a TV show, I write it down to remember it.",
     tags: ['Word 1', 'Word 2', 'Word 3'],
-  },
+    },
   { id: 19, type: 'photo', image: portraitTeal, tint: '#5b2a9a', alt: 'Portrait of Modesta' },
 
   // Row 4 (right side, next to the intro box)

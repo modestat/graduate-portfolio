@@ -1,6 +1,6 @@
 .projects-container {
   background-color: #faf8f5;
-  padding: var(--section-y) var(--page-x);
+  padding: var(--section-y) var(--page-x) calc(var(--section-y) * 2.4);
   color: #2a0d12;
 }
 
